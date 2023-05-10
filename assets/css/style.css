@@ -83,10 +83,7 @@
 
 }
 
-:root {
 
-
-}
 
 
 
@@ -248,6 +245,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  zoom: 98%;
 }
 
 a {
@@ -1097,8 +1095,6 @@ main {
 
 
 
-
-
 /*-----------------------------------*\
   #PORTFOLIO
 \*-----------------------------------*/
@@ -1203,6 +1199,7 @@ main {
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
+
 }
 
 .project-img::before {
@@ -1236,6 +1233,7 @@ main {
   opacity: 0;
   z-index: 1;
   transition: var(--transition-1);
+  display: flex;
 }
 
 .project-item>a:hover .project-item-icon-box {
@@ -2197,7 +2195,7 @@ textarea.form-input::-webkit-resizer {
    */
 
   main {
-    max-width: 1200px;
+    max-width: 1500px;
     margin-inline: auto;
     display: flex;
     justify-content: center;
@@ -2288,3 +2286,23 @@ textarea.form-input::-webkit-resizer {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+  .hovered .edit-icon {
+    display: inline-block;
+  }
+
+  .edit-icon {
+    display: none;
+    margin-left: 0.5rem;
+    cursor: pointer;
+  }

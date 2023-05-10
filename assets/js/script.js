@@ -2,12 +2,6 @@
 
 
 
-
-//DarkMode
-
-
-
-
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
@@ -166,6 +160,10 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 
 
+
+//DarkMode
+
+
 function toggleRootStyles() {
   const checkbox = document.querySelector('.checkbox');
   const rootStyles = `
@@ -265,3 +263,167 @@ function toggleRootStyles() {
 
 toggleRootStyles();
 
+
+
+/***********Add project */
+
+document.getElementById("addButton").addEventListener("click", function() {
+  var formContainer = document.getElementById("formContainer");
+  formContainer.style.display = "block";
+});
+
+document.getElementById("blockForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  var imageUrl = document.getElementById("imageUrl").value;
+  var linkUrl = document.getElementById("linkUrl").value;
+  var title = document.getElementById("title").value;
+  var category = document.getElementById("category").value;
+
+  // Create the new block elements
+  var li = document.createElement("li");
+  li.classList.add("project-item", "active");
+  li.setAttribute("data-filter-item", "");
+  li.setAttribute("data-category", category);
+
+  var a = document.createElement("a");
+  a.href = linkUrl;
+
+  var figure = document.createElement("figure");
+  figure.classList.add("project-img");
+
+  var iconBox = document.createElement("div");
+  iconBox.classList.add("project-item-icon-box");
+
+  var icon1 = document.createElement("ion-icon");
+  icon1.setAttribute("name", "eye-outline");
+
+  var pre = document.createElement("pre");
+  pre.textContent = " | ";
+
+  var icon2 = document.createElement("ion-icon");
+  icon2.setAttribute("name", "trash-outline");
+  icon2.classList.add("remove-button");
+
+  var img = document.createElement("img");
+  img.src = imageUrl;
+  img.setAttribute("loading", "lazy");
+
+  var h3 = document.createElement("h3");
+  h3.classList.add("project-title");
+  h3.textContent = title;
+
+  var p = document.createElement("p");
+  p.classList.add("project-category");
+  p.textContent = category;
+
+  // Append the elements to construct the block
+  iconBox.appendChild(icon1);
+  iconBox.appendChild(pre);
+  iconBox.appendChild(icon2);
+  figure.appendChild(iconBox);
+  figure.appendChild(img);
+  a.appendChild(figure);
+  a.appendChild(h3);
+  a.appendChild(p);
+  li.appendChild(a);
+
+  // Append the new block to the project list
+  var projectList = document.querySelector(".project-list");
+  projectList.appendChild(li);
+
+  // Reset the form and hide the container
+  document.getElementById("blockForm").reset();
+  document.getElementById("formContainer").style.display = "none";
+});
+
+
+/***********remove project */
+
+
+
+// Get all the project items
+const projectItems = document.querySelectorAll('.project-item');
+
+// Add event listeners to each project item
+projectItems.forEach(item => {
+  const removeButton = item.querySelector('.remove-button');
+
+  // Add event listener for hovering over the project item
+  item.addEventListener('mouseover', () => {
+    removeButton.style.display = 'block';
+  });
+
+  // Add event listener for moving the mouse out of the project item
+  item.addEventListener('mouseout', () => {
+    removeButton.style.display = 'none';
+  });
+
+  // Add event listener for clicking the remove button
+  removeButton.addEventListener('click', () => {
+    item.style.display = 'none';
+  });
+});
+
+
+
+
+
+
+
+
+
+/****************edit*/ 
+
+
+
+
+  // Function to handle the editing functionality
+  function handleEdit(element) {
+    var text = element.innerText;
+    var newText = prompt("Edit the content:", text);
+    if (newText !== null) {
+      element.innerText = newText;
+    }
+  }
+
+  // Function to handle the removal functionality
+  function handleRemove(element) {
+    if (confirm("Are you sure you want to remove this element?")) {
+      element.remove();
+    }
+  }
+
+  // Add event listeners to enable editing and removing on hover
+  document.addEventListener("DOMContentLoaded", function () {
+    var hoverElements = document.querySelectorAll("[data-editable]");
+    hoverElements.forEach(function (element) {
+      element.addEventListener("mouseover", function () {
+        this.classList.add("hovered");
+      });
+      element.addEventListener("mouseout", function () {
+        this.classList.remove("hovered");
+      });
+      element.addEventListener("click", function (event) {
+        event.stopPropagation();
+        var icon = this.querySelector(".edit-icon");
+        if (icon) {
+          icon.remove();
+        } else {
+          var editIcon = document.createElement("span");
+          editIcon.classList.add("edit-icon");
+          editIcon.innerHTML = '<ion-icon name="create-outline"></ion-icon>';
+          this.appendChild(editIcon);
+          editIcon.addEventListener("click", function (event) {
+            event.stopPropagation();
+            handleEdit(element);
+          });
+        }
+        
+      });
+      element.addEventListener("dbclick", function (event) {
+        event.stopPropagation();
+        handleRemove(element);
+      });
+    });
+  });
