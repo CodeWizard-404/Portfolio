@@ -163,3 +163,105 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+function toggleRootStyles() {
+  const checkbox = document.querySelector('.checkbox');
+  const rootStyles = `
+  :root {
+
+    --bg-gradient-onyx: linear-gradient(to bottom right,
+      hsl(0, 0%, 81%) 3%,
+      hsl(0, 0%, 84%) 97%);
+    --bg-gradient-jet: linear-gradient(to bottom right,
+      hsla(0, 0%, 100%, 0.251) 0%,
+      hsla(0, 0%, 75%, 0) 100%), 
+      hsl(0, 0%, 64%);
+    --bg-gradient-blue-1: linear-gradient(to bottom right,
+      hsl(237, 59%, 49%) 0%,
+      hsla(0, 0%, 93%, 0) 50%);
+    --bg-gradient-blue-2: linear-gradient(135deg,
+      hsla(242, 100%, 71%, 0.251) 0%,
+      hsla(0, 0%, 91%, 0) 59.86%), 
+      hsl(0, 0%, 93%);
+    --border-gradient-onyx: linear-gradient(to bottom right,
+      hsl(0, 0%, 73%) 0%,
+      hsla(0, 0%, 58%, 0) 50%);
+    --text-gradient-blue: linear-gradient(to right,
+      hsl(237, 59%, 49%),
+      hsl(237, 59%, 49%));
+    
+    
+    --jet: hsl(0, 0%, 65%);
+    --onyx: hsl(0, 0%, 72%);
+    --eerie-black-1: hsl(0, 0%, 91%);
+    --eerie-black-2: hsl(0, 0%, 86%);
+    --smoky-black: hsl(0, 2%, 11%);
+    --white-1: hsl(0, 0%, 0%);
+    --white-2: hsl(0, 0%, 0%);
+    --blue-crayola: hsl(237, 100%, 65%);
+    --vegas-blue: hsl(237, 69%, 55%);
+    --light-gray: hsl(0, 0%, 14%);
+    --light-gray-70: hsla(0, 0%, 18%, 0.7);
+    --red-dead: hsl(0, 43%, 51%);
+    --gray-ech:hsla(0, 0%, 73%, 0.75);
+    
+    --shadow-1: -4px 8px 24px hsla(0, 0%, 00%, 0.25);
+    --shadow-2: 0 16px 30px hsla(0, 0%, 00%, 0.25);
+    --shadow-3: 0 16px 40px hsla(0, 0%, 00%, 0.25);
+    --shadow-4: 0 25px 50px hsla(0, 0%, 00%, 0.15);
+    --shadow-5: 0 24px 40px hsla(0, 0%, 100%, 0.25);
+    
+    --fw-300: 500;
+    --fw-400: 600;
+    --fw-500: 700;
+    --fw-600: 800;
+  
+  }
+  `;
+
+
+  const avatarImages = document.querySelectorAll('.avatar-box img');
+  const defaultImageSrc = './assets/images/PDP.jpg';
+  const newImageSrc = './assets/images/PDP..jpg';
+  const reversedImageFilter = 'invert(100%)';
+  const iconImages = document.querySelectorAll('.service-icon-box img');
+  
+  checkbox.addEventListener('change', () => {
+    const styleElement = document.querySelector('#rootStyles');
+  
+    if (checkbox.checked) {
+      if (!styleElement) {
+        const style = document.createElement('style');
+        style.id = 'rootStyles';
+        style.innerHTML = rootStyles;
+        document.head.appendChild(style);
+      }
+      
+      avatarImages.forEach((image) => {
+        image.src = newImageSrc;
+      });
+      
+      iconImages.forEach((image) => {
+        image.style.filter = reversedImageFilter;
+      });
+    } else {
+      if (styleElement) {
+        styleElement.remove();
+      }
+      
+      avatarImages.forEach((image) => {
+        image.src = defaultImageSrc;
+      });
+      
+      iconImages.forEach((image) => {
+        image.style.filter = 'none';
+      });
+    }
+  });
+  
+}
+
+toggleRootStyles();
+
