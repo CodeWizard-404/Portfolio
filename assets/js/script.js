@@ -195,7 +195,7 @@ function toggleRootStyles() {
     --onyx: hsl(0, 0%, 72%);
     --eerie-black-1: hsl(0, 0%, 91%);
     --eerie-black-2: hsl(0, 0%, 86%);
-    --smoky-black: hsl(0, 2%, 11%);
+    --smoky-black: hsl(0, 0%, 50%);
     --white-1: hsl(0, 0%, 0%);
     --white-2: hsl(0, 0%, 0%);
     --blue-crayola: hsl(237, 100%, 65%);
