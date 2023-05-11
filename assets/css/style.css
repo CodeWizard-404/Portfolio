@@ -1566,10 +1566,6 @@ textarea.form-input::-webkit-resizer {
 }
 
 
-
-
-
-
 /**
  * responsive larger than 450px screen
  */
@@ -1611,6 +1607,8 @@ textarea.form-input::-webkit-resizer {
     font-size: 15px;
     font-weight: 600;
     border-radius: 8px;
+    top: auto;
+    left: auto;
   }
   .download-button:hover .download {
     transform: translateX(200%)
@@ -1624,12 +1622,6 @@ textarea.form-input::-webkit-resizer {
   }
 
 }
-
-
-
-
-
-
 
 
 
