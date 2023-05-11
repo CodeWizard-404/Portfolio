@@ -2,12 +2,10 @@
 
 
 
-// element toggle function
+// element toggle function_____________________________________________________
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-
-
-// sidebar variables
+// sidebar variables____________________________________________________________
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
@@ -16,7 +14,9 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 
 
-// testimonials variables
+
+
+// Feedback variables__________________________________________________________
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
@@ -55,7 +55,18 @@ overlay.addEventListener("click", testimonialsModalFunc);
 
 
 
-// custom select variables
+
+
+
+
+
+
+
+
+
+
+
+// Filter Projects_____________________________________________________________
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
@@ -115,7 +126,14 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
-// contact form variables
+
+
+
+
+
+
+
+// contact form variables_________________________________________________
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
@@ -136,7 +154,46 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
-// page navigation variables
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// page navigation variables_____________________________________________
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
@@ -161,9 +218,17 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 
 
-//DarkMode
 
 
+
+
+
+
+
+
+//DarkMode____________________________________________________
+
+//invert color
 function toggleRootStyles() {
   const checkbox = document.querySelector('.checkbox');
   const rootStyles = `
@@ -219,7 +284,7 @@ function toggleRootStyles() {
   }
   `;
 
-
+//invert images
   const avatarImages = document.querySelectorAll('.avatar-box img');
   const defaultImageSrc = './assets/images/PDP.jpg';
   const newImageSrc = './assets/images/PDP..jpg';
@@ -265,7 +330,13 @@ toggleRootStyles();
 
 
 
-/***********Add project */
+
+
+
+
+
+
+// Add project_______________________________________________________________
 
 document.getElementById("addButton").addEventListener("click", function() {
   var formContainer = document.getElementById("formContainer");
@@ -275,6 +346,7 @@ document.getElementById("addButton").addEventListener("click", function() {
 document.getElementById("blockForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
+  //get infos
   var imageUrl = document.getElementById("imageUrl").value;
   var linkUrl = document.getElementById("linkUrl").value;
   var title = document.getElementById("title").value;
@@ -338,9 +410,10 @@ document.getElementById("blockForm").addEventListener("submit", function(event) 
 });
 
 
-/***********remove project */
 
 
+
+// remove project______________________________________________________
 
 // Get all the project items
 const projectItems = document.querySelectorAll('.project-item');
@@ -373,10 +446,10 @@ projectItems.forEach(item => {
 
 
 
-/****************edit*/ 
 
 
 
+//Edit Test__________________________________________________________________
 
   // Function to handle the editing functionality
   function handleEdit(element) {
@@ -427,3 +500,24 @@ projectItems.forEach(item => {
       });
     });
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
