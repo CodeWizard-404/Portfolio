@@ -482,7 +482,7 @@ main {
 .sidebar-info {
   position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content:flex-start;
   align-items: center;
   gap: 15px;
 }
@@ -1537,7 +1537,13 @@ textarea.form-input::-webkit-resizer {
     height: auto;
   }
 
+  .toggle-switch{
+    position: absolute;
+    left: 80%;
+    top: 19%;
+  }
 }
+
 
 
 
@@ -1886,6 +1892,12 @@ textarea.form-input::-webkit-resizer {
   .form-btn ion-icon {
     font-size: 18px;
   }
+  .toggle-switch{
+    position: absolute;
+    left: 80%;
+    top: 19%;
+  }
+
 
 }
 
@@ -1910,6 +1922,13 @@ textarea.form-input::-webkit-resizer {
   .has-scrollbar::-webkit-scrollbar-button {
     width: 100px;
   }
+
+  .toggle-switch {
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 50px;
+    height: 10px;}
 
 
 
