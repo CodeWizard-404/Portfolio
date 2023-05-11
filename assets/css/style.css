@@ -1550,11 +1550,18 @@ textarea.form-input::-webkit-resizer {
     font-size: 12px;
     font-weight: 200;
     border-radius: 20px;
-    top: 22px;
+    top: 31px;
     left: 60px;
   }
   .download-button:hover .download {
     transform: translateX(-200%)
+  }
+
+  .download-button .docs {
+    min-height: 22px;
+  }
+  .download svg polyline, .download svg line {
+    animation: none;
   }
 }
 
@@ -1596,7 +1603,30 @@ textarea.form-input::-webkit-resizer {
     left: 70%;
     top: 2.5%;
   }
+
+
+  .download-button {
+    position: relative;
+    border-width: 0;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+  .download-button:hover .download {
+    transform: translateX(200%)
+  }
+
+  .download-button .docs {
+    min-height: 30px;
+  }
+  .download svg polyline, .download svg line {
+    animation: docs 1s infinite;
+  }
+
 }
+
+
+
 
 
 
@@ -1738,6 +1768,10 @@ textarea.form-input::-webkit-resizer {
     left: 5%;
     width: 50px;
     height: 10px;}
+
+    .download-button .docs {
+      min-height: 40px;
+    }
 
 
 
