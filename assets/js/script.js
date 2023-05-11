@@ -156,6 +156,44 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
+// Login_____________________________________________
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevents form submission
+
+  // Get the input values
+  var username = document.querySelector('#loginForm input[name="logName"]').value;
+  var password = document.querySelector('#loginForm input[name="logPass"]').value;
+
+  // Check if username and password match the required credentials
+  var isValid = username === 'Admin' && password === 'PassAdmin';
+
+  if (isValid) {
+    var validContainer = document.getElementById('validContainer');
+    validContainer.textContent = 'Welcome Back, Sir!';
+    validContainer.classList.add('success-message');
+
+    setTimeout(function() {
+      document.getElementById('loginForm').submit();
+    }, 2000);
+
+    setTimeout(function() {
+      validContainer.textContent = '';
+      validContainer.classList.remove('success-message');
+    }, 3000);
+
+  } else {
+    var errorContainer = document.getElementById('errorContainer');
+    errorContainer.textContent = 'Invalid username or password !!!';
+    errorContainer.classList.add('error-message');
+
+    setTimeout(function() {
+      errorContainer.textContent = '';
+      errorContainer.classList.remove('error-message');
+    }, 1000); 
+  }
+});
+
+
 
 
 
@@ -502,22 +540,3 @@ projectItems.forEach(item => {
   });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  

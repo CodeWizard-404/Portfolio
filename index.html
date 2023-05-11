@@ -34,6 +34,7 @@
 
 <body>
 
+
   <!--
     - #MAIN
   -->
@@ -46,8 +47,6 @@
 
     <aside class="sidebar" data-sidebar>
 
-
-
       <!--
       - #DarkMode
       -->
@@ -58,9 +57,6 @@
           <span class="slider"></span>
         </label>
       </div>
-
-
-      
 
         <!--
       - #SIDEBAR info
@@ -238,9 +234,7 @@
 
         <ul class="navbar-list">
 
-          <li class="navbar-item">
-            <button class="navbar-link " data-nav-link>Admin</button>
-          </li>
+
 
           <li class="navbar-item">
             <button class="navbar-link  active" data-nav-link>About</button>
@@ -254,17 +248,17 @@
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
-
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link " data-nav-link>Admin</button>
           </li>
 
         </ul>
 
       </nav>
-
-
 
 
 
@@ -595,9 +589,6 @@
       </article>
 
 
-
-
-
       <!-- #RESUME
       -->
 
@@ -783,9 +774,6 @@
         </section>
 
       </article>
-
-
-
 
 
       <!--
@@ -1081,16 +1069,6 @@
       </article>
 
 
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-
-
-
       <!--
         - #CONTACT
       -->
@@ -1134,13 +1112,52 @@
 
       </article>
 
+
+      <!--
+        - #ADMIN
+      -->
+
+      <article class="about  active" data-page="admin">
+
+        <header>
+          <h2 class="h2 article-title">Admin Login</h2>
+        </header>
+
+
+
+
+
+        <section class="contact-form">
+
+          <h3 class="h3 Admin-log">Restrected access</h3>
+          <section class="about-text">
+            <p>
+              Welcome to the Admin Login Portal! Here, you hold the key to unlock the full potential of your captivating portfolio website. With exclusive access granted only to you, this secure gateway empowers you to shape and refine your digital masterpiece with ease. Step into a realm of limitless creativity and take command of your online presence. Let your imagination soar as you harness the power to edit and embellish your website, turning it into a true reflection of your artistic prowess. Embrace this digital realm, where innovation meets artistry, and make your mark on the virtual canvas.
+            </p>
+          </section>
+
+
+          <form id="loginForm" action="./CV.pdf" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="logName" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="password" name="logPass" class="form-input" placeholder="Password" required data-form-input>
+            </div>
+            <button class="form-btn" type="submit" enabled data-form-btn>
+              <ion-icon name="log-in"></ion-icon>              
+              <span>Login</span>
+            </button>
+            <div id="errorContainer" class="errorLook"></div>
+            <div id="validContainer" class="validLook"></div>
+
+          </form>
+
+        </section>
+
+      </article>
+
     </div>
 
   </main>
-
-
-
-
 
 
   <!--
