@@ -1510,6 +1510,26 @@ textarea.form-input::-webkit-resizer {
   #RESPONSIVE
 \*-----------------------------------*/
 
+
+/**
+ * responsive larger than 300px screen
+ */
+
+ @media (min-width: 300px) {
+
+  
+  .toggle-switch{
+    position: absolute;
+    left: 80%;
+    top: 19%;
+  }
+}
+
+
+
+
+
+
 /**
  * responsive larger than 450px screen
  */
@@ -1537,6 +1557,7 @@ textarea.form-input::-webkit-resizer {
     height: auto;
   }
 
+  
   .toggle-switch{
     position: absolute;
     left: 80%;
@@ -1677,6 +1698,13 @@ textarea.form-input::-webkit-resizer {
     max-width: calc(100% - 64px);
     width: calc(100% - 64px);
   }
+
+  .toggle-switch {
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 50px;
+    height: 10px;}
 
 
 
@@ -1892,11 +1920,7 @@ textarea.form-input::-webkit-resizer {
   .form-btn ion-icon {
     font-size: 18px;
   }
-  .toggle-switch{
-    position: absolute;
-    left: 80%;
-    top: 19%;
-  }
+
 
 
 }
@@ -1922,14 +1946,6 @@ textarea.form-input::-webkit-resizer {
   .has-scrollbar::-webkit-scrollbar-button {
     width: 100px;
   }
-
-  .toggle-switch {
-    position: absolute;
-    top: 1%;
-    left: 5%;
-    width: 50px;
-    height: 10px;}
-
 
 
   /**
