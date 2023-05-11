@@ -1517,11 +1517,44 @@ textarea.form-input::-webkit-resizer {
 
  @media (min-width: 300px) {
 
+    /**
+   * client
+   */
+
+   .clients-item {
+    min-width: calc(33.33% - 10px);
+  }
+
+  .avatar-box img {
+    width: 65px;
+  }
+
+  /**
+   * #PORTFOLIO, BLOG 
+   */
+
+  .project-img,
+  .blog-banner-box {
+    height: auto;
+  }
   
   .toggle-switch{
     position: absolute;
     left: 70%;
     top: 2.5%;
+  }
+
+  .download-button {
+    position: relative;
+    border-width: 10px;
+    font-size: 12px;
+    font-weight: 200;
+    border-radius: 20px;
+    top: 22px;
+    left: 60px;
+  }
+  .download-button:hover .download {
+    transform: translateX(-200%)
   }
 }
 
