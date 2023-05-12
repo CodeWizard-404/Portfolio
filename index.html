@@ -35,6 +35,8 @@
 <body>
 
 
+
+
   <!--
     - #MAIN
   -->
@@ -210,8 +212,37 @@
                 <ion-icon name="logo-linkedin"></ion-icon>
               </a>
             </li>
-          </ul>
 
+
+            
+          </ul>
+          <ul class="wrapper ">
+            <li class="icon facebook">
+              <span class="tooltip">Facebook</span>
+              <a href="#" ><ion-icon name="logo-facebook"></ion-icon><i class="fab fa-facebook-f"></i></a>
+            </li>
+          
+            <li class="icon instagram">
+              <span class="tooltip">Instagram</span>
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon><i class="fab fa-instagram"></i></a>
+            </li>
+          
+              <li class="icon github">
+                <span class="tooltip">GitHub</span>
+                <a href="https://github.com" ><ion-icon name="logo-github"></ion-icon><i class="fab fa-github"></i></a>
+              </li>
+              <li class="icon stackoverflow">
+                <span class="tooltip">Stack Overflow</span>
+                <a href="https://stackoverflow.com"><ion-icon name="logo-stackoverflow"></ion-icon><i class="fab fa-stack-overflow"></i></a>
+              </li>
+              <li class="icon linkedin">
+                <span class="tooltip">LinkedIn</span>
+                <a href="https://linkedin.com"><ion-icon name="logo-linkedin"></ion-icon><i class="fab fa-linkedin"></i></a>
+              </li>
+          
+            
+          </ul>
+          
         </div>
 
     </aside>
@@ -1051,7 +1082,7 @@
         <div id="formContainer" style="display: none;">
           <form id="blockForm">
             <label for="imageUrl">Image URL:</label>
-            <input type="text" id="imageUrl" required>
+            <input type="file" id="imageUrl" accept="images" required>
         
             <label for="linkUrl">Link URL:</label>
             <input type="text" id="linkUrl" required>
@@ -1117,7 +1148,7 @@
         - #ADMIN
       -->
 
-      <article class="about  active" data-page="admin">
+      <article class="about" data-page="admin">
 
         <header>
           <h2 class="h2 article-title">Admin Login</h2>

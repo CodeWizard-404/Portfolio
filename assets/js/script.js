@@ -312,7 +312,7 @@ function toggleRootStyles() {
     --shadow-2: 0 16px 30px hsla(0, 0%, 00%, 0.25);
     --shadow-3: 0 16px 40px hsla(0, 0%, 00%, 0.25);
     --shadow-4: 0 25px 50px hsla(0, 0%, 00%, 0.15);
-    --shadow-5: 0 24px 40px hsla(0, 0%, 100%, 0.25);
+    --shadow-5: 0 14px 20px hsla(0, 0%, 00%, 0.25);
     
     --fw-300: 500;
     --fw-400: 600;
