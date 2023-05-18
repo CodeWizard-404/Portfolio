@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--
-  Dark Mode 
-  Login
-  Edit
-  Api
--->
 
 <head>
   <meta charset="UTF-8">
@@ -30,12 +24,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+
 </head>
 
 <body>
-
-
-
 
   <!--
     - #MAIN
@@ -67,13 +61,13 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/PDP.jpg" alt="Richard hanrick" width="80" data-editable>
+          <img src="./assets/images/PDP.jpg" alt="Richard hanrick" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Name" data-editable>Laghouanem<br> Sofyen</h1>
+          <h1 class="name" title="Name">Laghouanem<br> Sofyen</h1>
 
-          <p class="title" data-editable>Developer</p>
+          <p class="title">Developer</p>
         </div>
 
         <!--
@@ -292,6 +286,10 @@
 
           <li class="navbar-item">
             <button class="navbar-link " data-nav-link>Admin</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link " data-nav-link>API GitHub</button>
           </li>
 
         </ul>
@@ -629,7 +627,7 @@
 
       <!-- #RESUME
       -->
-
+      <!--
       <article class="resume" data-page="resume">
 
         <header>
@@ -759,7 +757,20 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">HTML, CSS, JS</h5>
-                <data value="90">90%</data>
+                <data value="65">65%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 65%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">C Programming</h5>
+                <data value="80">80%</data>
               </div>
 
               <div class="skill-progress-bg">
@@ -771,25 +782,12 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">C Programming</h5>
-                <data value="85">85%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
                 <h5 class="h5">Linux</h5>
-                <data value="80">80%</data>
+                <data value="40">40%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
+                <div class="skill-progress-fill" style="width: 40%;"></div>
               </div>
 
             </li>
@@ -798,11 +796,11 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">Excel, PowerPoint</h5>
-                <data value="50">50%</data>
+                <data value="60">60%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
+                <div class="skill-progress-fill" style="width: 60%;"></div>
               </div>
 
             </li>
@@ -811,7 +809,343 @@
 
         </section>
 
+      </article>-->
+
+
+      <article class="resume" data-page="resume" >
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education <div class="edit-icon" onclick="editEducation()"><ion-icon name="create"
+                  style="display: none;"></ion-icon></div>
+            </h3>
+          </div>
+
+          <ol id="education-list" class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">High School Fahat Hached Rades</h4>
+              <span>2018 — 2021</span>
+              <p class="timeline-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
+                quod?
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">ISG Gabes</h4>
+              <span>2021 — 2022</span>
+              <p class="timeline-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
+                quod?
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">ISET Charguia</h4>
+              <span>2022 — Now</span>
+              <p class="timeline-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
+                quod?
+              </p>
+            </li>
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience
+              <div class="edit-icon" onclick="editExperience()"><ion-icon name="create"
+                  style="display: none;"></ion-icon></div>
+            </h3>
+          </div>
+
+          <ol id="experience-list" class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Test</h4>
+              <span>2015 — Present</span>
+              <p class="timeline-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam recusandae repellat quidem ea eos!
+                Atque
+                unde ducimus, error laboriosam dignissimos debitis, doloribus quo fuga doloremque earum distinctio
+                molestiae
+                provident libero.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Test</h4>
+              <span>2013 — 2015</span>
+              <p class="timeline-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta architecto saepe consequuntur omnis sequi
+                tempore necessitatibus ullam, accusamus suscipit animi odio tenetur perferendis soluta hic beatae autem
+                ut
+                laborum placeat.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Test</h4>
+              <span>2010 — 2013</span>
+              <p class="timeline-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A in placeat dolorem commodi libero voluptatem.
+                Maxime dolore nisi nulla earum adipisci accusamus, recusandae perferendis optio, consectetur dolores
+                consequatur numquam repellendus.
+              </p>
+            </li>
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills <div class="edit-icon" onclick="editSkills()"><ion-icon name="create"
+                style="display: none;"></ion-icon></div>
+          </h3>
+
+
+          <ul id="skills-list" class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">HTML, CSS, JS</h5>
+                <data value="65">65%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 65%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">C Programming</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Linux</h5>
+                <data value="40">40%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 40%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Excel, PowerPoint</h5>
+                <data value="60">60%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+            </li>
+          </ul>
+
+        </section>
+
       </article>
+
+      <!-- Edit Education Modal -->
+      <div id="editEducationModal" class="modal" style="display: none;">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('editEducationModal')">&times;</span>
+          <h4>Edit Education</h4>
+          <form id="educationForm">
+            <label for="schoolName">School Name:</label>
+            <input type="text" id="schoolName" required>
+            <label for="schoolYears">Years:</label>
+            <input type="text" id="schoolYears" required>
+            <label for="schoolDescription">Description:</label>
+            <textarea id="schoolDescription" required></textarea>
+            <button type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Edit Experience Modal -->
+      <div id="editExperienceModal" class="modal" style="display: none;">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('editExperienceModal')">&times;</span>
+          <h4>Edit Experience</h4>
+          <form id="experienceForm">
+            <label for="experienceTitle">Title:</label>
+            <input type="text" id="experienceTitle" required>
+            <label for="experienceYears">Years:</label>
+            <input type="text" id="experienceYears" required>
+            <label for="experienceDescription">Description:</label>
+            <textarea id="experienceDescription" required></textarea>
+            <button type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Edit Skills Modal -->
+      <div id="editSkillsModal" class="modal" style="display: none;">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('editSkillsModal')">&times;</span>
+          <h4>Edit Skills</h4>
+          <form id="skillsForm">
+            <label for="skillName">Skill Name:</label>
+            <input type="text" id="skillName" required>
+            <label for="skillPercentage">Percentage:</label>
+            <input type="text" id="skillPercentage" required>
+            <button type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <script>
+
+        function editEducation() {
+          const educationModal = document.getElementById('editEducationModal');
+          educationModal.style.display = 'block';
+        }
+
+        function editExperience() {
+          const experienceModal = document.getElementById('editExperienceModal');
+          experienceModal.style.display = 'block';
+        }
+
+        function editSkills() {
+          const skillsModal = document.getElementById('editSkillsModal');
+          skillsModal.style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+          const modal = document.getElementById(modalId);
+          modal.style.display = 'none';
+        }
+
+
+        document.getElementById('educationForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+          const schoolName = document.getElementById('schoolName').value;
+          const schoolYears = document.getElementById('schoolYears').value;
+          const schoolDescription = document.getElementById('schoolDescription').value;
+
+          // Update or add the education item in the list
+          const educationList = document.getElementById('education-list');
+          const newItem = document.createElement('li');
+          newItem.className = 'timeline-item';
+          newItem.innerHTML = `
+            <h4 class="h4 timeline-item-title">${schoolName}</h4>
+            <span>${schoolYears}</span>
+            <p class="timeline-text">${schoolDescription}</p>
+          `;
+
+          // Add the new item at the beginning of the list
+          educationList.insertBefore(newItem, educationList.firstChild);
+
+          closeModal('editEducationModal');
+        });
+
+        document.getElementById('experienceForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+          const experienceTitle = document.getElementById('experienceTitle').value;
+          const experienceYears = document.getElementById('experienceYears').value;
+          const experienceDescription = document.getElementById('experienceDescription').value;
+
+          // Update or add the experience item in the list
+          const experienceList = document.getElementById('experience-list');
+          const newItem = document.createElement('li');
+          newItem.className = 'timeline-item';
+          newItem.innerHTML = `
+            <h4 class="h4 timeline-item-title">${experienceTitle}</h4>
+            <span>${experienceYears}</span>
+            <p class="timeline-text">${experienceDescription}</p>
+          `;
+
+          // Add the new item at the beginning of the list
+          experienceList.insertBefore(newItem, experienceList.firstChild);
+
+          closeModal('editExperienceModal');
+        });
+
+        document.getElementById('skillsForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+          const skillName = document.getElementById('skillName').value;
+          const skillPercentage = document.getElementById('skillPercentage').value;
+
+          // Find the skills item with the corresponding skill name
+          const skillsList = document.getElementById('skills-list');
+          const skillsItems = skillsList.getElementsByClassName('skills-item');
+
+          let targetItem = null;
+          for (let i = 0; i < skillsItems.length; i++) {
+            const titleElement = skillsItems[i].querySelector('.title-wrapper h5');
+            if (titleElement.innerText === skillName) {
+              targetItem = skillsItems[i];
+              break;
+            }
+          }
+
+          if (targetItem) {
+            // Update the existing skill item
+            targetItem.querySelector('.title-wrapper data').setAttribute('value', skillPercentage);
+            targetItem.querySelector('.skill-progress-fill').style.width = `${skillPercentage}%`;
+          } else {
+            // Create a new skill item
+            const newItem = document.createElement('li');
+            newItem.className = 'skills-item';
+            newItem.innerHTML = `
+              <div class="title-wrapper">
+                <h5 class="h5">${skillName}</h5>
+                <data value="${skillPercentage}">${skillPercentage}%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: ${skillPercentage}%;"></div>
+              </div>
+            `;
+
+            // Add the new item at the end of the list
+            skillsList.appendChild(newItem);
+          }
+
+          closeModal('editSkillsModal');
+        });
+
+
+
+
+        document.getElementById('educationForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+          const schoolName = document.getElementById('schoolName').value;
+          const schoolYears = document.getElementById('schoolYears').value;
+          const schoolDescription = document.getElementById('schoolDescription').value;
+
+          // Create a new window to display the result
+          const newWindow = window.open('', '_blank');
+
+          // Set the content of the new window
+          newWindow.document.write(`
+    <h2>${schoolName}</h2>
+    <p>${schoolYears}</p>
+    <p>${schoolDescription}</p>
+  `);
+
+          closeModal('editEducationModal');
+        });
+
+      </script>
+
+
+
+
+
+
+
 
 
       <!--
@@ -1084,7 +1418,7 @@
         </section>
 
         <!--------------------------------------------------------------------------------------------------->
-        <button id="addButton">Add Project</button>
+        <button id="addButton" >Add Project</button>
 
         <div id="formContainer" style="display: none;">
           <form id="blockForm">
@@ -1112,45 +1446,37 @@
       -->
 
       <article class="contact" data-page="contact">
-
         <header>
           <h2 class="h2 article-title">Contact</h2>
         </header>
 
         <section class="mapbox" data-mapbox>
           <figure>
-
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6733144.240998148!2d10.641208!3d34.511298!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDQ1JzQ1LjEiTiAxMMKwMTUnNTkuMyJF!5e0!3m2!1sen!2stn!4v1683764068141!5m2!1sen!2stn"
               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
           </figure>
         </section>
 
         <section class="contact-form">
-
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
-
+          <form action="mailto:sofienlaghouanem@gmail.com" method="post" class="form">
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <button class="form-btn" type="submit">
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
-
           </form>
-
         </section>
-
       </article>
+
 
 
       <!--
@@ -1182,7 +1508,7 @@
           </section>
 
 
-          <form id="loginForm" action="./CV.pdf" class="form" data-form>
+          <form id="loginForm" class="form" data-form>
             <div class="input-wrapper">
               <input type="text" name="logName" class="form-input" placeholder="Full name" required data-form-input>
               <input type="password" name="logPass" class="form-input" placeholder="Password" required data-form-input>
@@ -1200,9 +1526,39 @@
 
       </article>
 
-    </div>
+              <!--
+        - #API Github
+      -->
+
+      <article class="about" data-page="api github">
+
+        <header>
+          <h2 class="h2 article-title">Github</h2>
+        </header>
+
+        <section class="contact-form">
+
+          <h3 class="h3 ">Github API</h3>
+          <section class="about-text">
+            <p>
+              Github APIs( or Github ReST APIs) are the APIs that you can use to interact with GitHub. They allow you to create and manage repositories, branches, issues, pull requests, and many more. For fetching publicly available information (like public repositories, user profiles, etc.), you can call the API. For other actions, you need to provide an authenticated token.
+            </p><br><br>
+          </section>
+          <div id="github-user-info"></div>
+<div id="github-repo-list"></div>
+
+
+        </section>
+        
+
+        
+        
+        
+
+      </article>
 
   </main>
+
 
 
   <!--

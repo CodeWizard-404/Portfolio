@@ -1563,6 +1563,107 @@ textarea.form-input::-webkit-resizer {
 
 
 
+/*-----------------------------------*\
+  #GITHUB
+\*-----------------------------------*/
+
+
+
+
+
+#github-user-info {
+  border: 1px solid var(--white-1);
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  background-color: var(--border-gradient-onyx);
+  color: var(--white-1);
+  box-shadow: var(--shadow-1);
+  animation: fade-in 0.5s ease-in-out;
+  
+}
+
+#github-user-info h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+#github-user-info p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+#github-user-info a {
+  color: var( --blue-crayola);
+  text-decoration: none;
+}
+
+#github-user-info img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  animation: rotate 1.5s linear infinite;
+}
+
+#github-repo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content:space-evenly;
+}
+
+#github-repo-list li {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: var(--border-gradient-onyx);
+  color: var(--white-2);
+  box-shadow: var(--shadow-1);
+  animation: slide-up 0.5s ease-in-out;
+
+  
+}
+
+#github-repo-list h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  color: var(--white-1);
+  text-decoration: underline;
+}
+
+#github-repo-list p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: var(--light-gray);
+
+}
+
+#github-repo-list a {
+  color: var( --blue-crayola);
+  text-decoration: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-----------------------------------*\
   #RESPONSIVE
@@ -2480,7 +2581,7 @@ textarea.form-input::-webkit-resizer {
 
 
 
-
+/*
 
 
 
@@ -2492,4 +2593,4 @@ textarea.form-input::-webkit-resizer {
   display: none;
   margin-left: 0.5rem;
   cursor: pointer;
-}
+}*/

@@ -172,9 +172,15 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     validContainer.textContent = 'Welcome Back, Sir!';
     validContainer.classList.add('success-message');
 
+    // Show all ion-icon elements
+    var ionIcons = document.querySelectorAll('.edit-icon ion-icon');
+    ionIcons.forEach(function(icon) {
+      icon.style.display = 'block';
+    });
+/*
     setTimeout(function() {
       document.getElementById('loginForm').submit();
-    }, 2000);
+    }, 2000);*/
 
     setTimeout(function() {
       validContainer.textContent = '';
@@ -192,6 +198,8 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     }, 1000); 
   }
 });
+
+
 
 
 
@@ -538,5 +546,78 @@ projectItems.forEach(item => {
       });
     });
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//API___________________________________________________________________________
+function fetchGitHubUserData(username) {
+  const userUrl = `https://api.github.com/users/${username}`;
+  const reposUrl = `https://api.github.com/users/${username}/repos`;
+
+  const userPromise = fetch(userUrl).then(response => response.json());
+  const reposPromise = fetch(reposUrl).then(response => response.json());
+
+  return Promise.all([userPromise, reposPromise])
+    .then(([userData, reposData]) => {
+      return { userData, reposData };
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      throw error;
+    });
+}
+
+function displayGitHubUserData(userData, reposData) {
+  const githubUserInfo = document.getElementById('github-user-info');
+  const githubRepoList = document.getElementById('github-repo-list');
+
+  const userHtml = `
+    <h2>${userData.name}</h2>
+    <img src="${userData.avatar_url}" alt="Profile Picture">
+    <p>Username: ${userData.login}</p>
+    <p>Followers: ${userData.followers}</p>
+    <p>Repositories: ${userData.public_repos}</p>
+    <p><a href="${userData.html_url}" target="_blank">View Profile</a></p>
+  `;
+
+  githubUserInfo.innerHTML = userHtml;
+
+  const reposHtml = reposData.map(repo => {
+    return `
+      <div>
+        <h3>${repo.name}</h3>
+        <p>${repo.description}</p>
+        <p>Language: ${repo.language}</p>
+        <p><a href="${repo.html_url}" target="_blank">View Repository</a></p>
+      </div>
+    `;
+  }).join('');
+
+  githubRepoList.innerHTML = reposHtml;
+}
+
+const username = 'CodeWizard-404';
+
+fetchGitHubUserData(username)
+  .then(({ userData, reposData }) => {
+    displayGitHubUserData(userData, reposData);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
 
 
