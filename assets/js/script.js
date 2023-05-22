@@ -157,7 +157,7 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 // Login_____________________________________________
-document.getElementById('loginForm').addEventListener('submit', function(e) {
+document.getElementById('loginForm').addEventListener('submit', function (e) {
   e.preventDefault(); // Prevents form submission
 
   // Get the input values
@@ -174,15 +174,16 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 
     // Show all ion-icon elements
     var ionIcons = document.querySelectorAll('.edit-icon ion-icon');
-    ionIcons.forEach(function(icon) {
+    var allicons = document.querySelectorAll('ion-icon');
+    allicons.forEach(function (icon) {
       icon.style.display = 'block';
     });
-/*
-    setTimeout(function() {
-      document.getElementById('loginForm').submit();
-    }, 2000);*/
+    /*
+        setTimeout(function() {
+          document.getElementById('loginForm').submit();
+        }, 2000);*/
 
-    setTimeout(function() {
+    setTimeout(function () {
       validContainer.textContent = '';
       validContainer.classList.remove('success-message');
     }, 3000);
@@ -192,30 +193,12 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     errorContainer.textContent = 'Invalid username or password !!!';
     errorContainer.classList.add('error-message');
 
-    setTimeout(function() {
+    setTimeout(function () {
       errorContainer.textContent = '';
       errorContainer.classList.remove('error-message');
-    }, 1000); 
+    }, 1000);
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -330,16 +313,16 @@ function toggleRootStyles() {
   }
   `;
 
-//invert images
+  //invert images
   const avatarImages = document.querySelectorAll('.avatar-box img');
   const defaultImageSrc = './assets/images/PDP.jpg';
   const newImageSrc = './assets/images/PDP..jpg';
   const reversedImageFilter = 'invert(100%)';
   const iconImages = document.querySelectorAll('.service-icon-box img');
-  
+
   checkbox.addEventListener('change', () => {
     const styleElement = document.querySelector('#rootStyles');
-  
+
     if (checkbox.checked) {
       if (!styleElement) {
         const style = document.createElement('style');
@@ -347,11 +330,11 @@ function toggleRootStyles() {
         style.innerHTML = rootStyles;
         document.head.appendChild(style);
       }
-      
+
       avatarImages.forEach((image) => {
         image.src = newImageSrc;
       });
-      
+
       iconImages.forEach((image) => {
         image.style.filter = reversedImageFilter;
       });
@@ -359,17 +342,17 @@ function toggleRootStyles() {
       if (styleElement) {
         styleElement.remove();
       }
-      
+
       avatarImages.forEach((image) => {
         image.src = defaultImageSrc;
       });
-      
+
       iconImages.forEach((image) => {
         image.style.filter = 'none';
       });
     }
   });
-  
+
 }
 
 toggleRootStyles();
@@ -384,76 +367,63 @@ toggleRootStyles();
 
 // Add project_______________________________________________________________
 
-document.getElementById("addButton").addEventListener("click", function() {
+document.getElementById("addButton").addEventListener("click", function () {
   var formContainer = document.getElementById("formContainer");
   formContainer.style.display = "block";
 });
 
-document.getElementById("blockForm").addEventListener("submit", function(event) {
+document.getElementById('blockForm').addEventListener('submit', function(event) {
   event.preventDefault();
 
-  //get infos
-  var imageUrl = document.getElementById("imageUrl").value;
-  var linkUrl = document.getElementById("linkUrl").value;
-  var title = document.getElementById("title").value;
-  var category = document.getElementById("category").value;
+  // Get form input values
+  const imageUrl = document.getElementById('imageUrl').value;
+  const linkUrl = document.getElementById('linkUrl').value;
+  const title = document.getElementById('title').value;
+  const category = document.getElementById('category').value;
 
-  // Create the new block elements
-  var li = document.createElement("li");
-  li.classList.add("project-item", "active");
-  li.setAttribute("data-filter-item", "");
-  li.setAttribute("data-category", category);
+  // Get the uploaded image file
+  const fileInput = document.getElementById('imageUrl');
+  const imageFile = fileInput.files[0];
 
-  var a = document.createElement("a");
-  a.href = linkUrl;
+  // Create a new FileReader object to read the image file
+  const reader = new FileReader();
 
-  var figure = document.createElement("figure");
-  figure.classList.add("project-img");
+  // Set up the FileReader onload event
+  reader.onload = function() {
+    // Create a new project item
+    const projectList = document.getElementById('project-list');
+    const newProjectItem = document.createElement('li');
+    newProjectItem.className = 'project-item active';
+    newProjectItem.setAttribute('data-filter-item', '');
+    newProjectItem.setAttribute('data-category', category);
 
-  var iconBox = document.createElement("div");
-  iconBox.classList.add("project-item-icon-box");
+    newProjectItem.innerHTML = `
+      <a href="${linkUrl}">
+        <figure class="project-img">
+          <div class="project-item-icon-box">
+            <ion-icon name="eye-outline"></ion-icon>
+            <pre> | </pre>
+            <ion-icon name="trash-outline" class="remove-button"></ion-icon>
+          </div>
+          <img src="${reader.result}" loading="lazy">
+        </figure>
+        <h3 class="project-title">${title}</h3>
+        <p class="project-category">${category}</p>
+      </a>
+    `;
 
-  var icon1 = document.createElement("ion-icon");
-  icon1.setAttribute("name", "eye-outline");
+    // Add the new project item to the project list
+    projectList.appendChild(newProjectItem);
 
-  var pre = document.createElement("pre");
-  pre.textContent = " | ";
+    // Close the modal
+    closeModal('formContainer');
+  };
 
-  var icon2 = document.createElement("ion-icon");
-  icon2.setAttribute("name", "trash-outline");
-  icon2.classList.add("remove-button");
-
-  var img = document.createElement("img");
-  img.src = imageUrl;
-  img.setAttribute("loading", "lazy");
-
-  var h3 = document.createElement("h3");
-  h3.classList.add("project-title");
-  h3.textContent = title;
-
-  var p = document.createElement("p");
-  p.classList.add("project-category");
-  p.textContent = category;
-
-  // Append the elements to construct the block
-  iconBox.appendChild(icon1);
-  iconBox.appendChild(pre);
-  iconBox.appendChild(icon2);
-  figure.appendChild(iconBox);
-  figure.appendChild(img);
-  a.appendChild(figure);
-  a.appendChild(h3);
-  a.appendChild(p);
-  li.appendChild(a);
-
-  // Append the new block to the project list
-  var projectList = document.querySelector(".project-list");
-  projectList.appendChild(li);
-
-  // Reset the form and hide the container
-  document.getElementById("blockForm").reset();
-  document.getElementById("formContainer").style.display = "none";
+  // Read the image file as a data URL
+  reader.readAsDataURL(imageFile);
 });
+
+
 
 
 
@@ -495,66 +465,256 @@ projectItems.forEach(item => {
 
 
 
-//Edit Test__________________________________________________________________
 
-  // Function to handle the editing functionality
-  function handleEdit(element) {
-    var text = element.innerText;
-    var newText = prompt("Edit the content:", text);
-    if (newText !== null) {
-      element.innerText = newText;
+
+
+
+
+
+//Edit Resume__________________________________________________________________
+
+
+function editEducation() {
+  const educationModal = document.getElementById('editEducationModal');
+  educationModal.style.display = 'block';
+}
+
+function editExperience() {
+  const experienceModal = document.getElementById('editExperienceModal');
+  experienceModal.style.display = 'block';
+}
+
+function editSkills() {
+  const skillsModal = document.getElementById('editSkillsModal');
+  skillsModal.style.display = 'block';
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = 'none';
+}
+
+
+document.getElementById('educationForm').addEventListener('submit', function (event) {
+  event.preventDefault();
+  const schoolName = document.getElementById('schoolName').value;
+  const schoolYears = document.getElementById('schoolYears').value;
+  const schoolDescription = document.getElementById('schoolDescription').value;
+
+  // Update or add the education item in the list
+  const educationList = document.getElementById('education-list');
+  const newItem = document.createElement('li');
+  newItem.className = 'timeline-item';
+  newItem.innerHTML = `
+    <h4 class="h4 timeline-item-title" contenteditable>${schoolName}
+      <div class="icons-info">
+      <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)" style="display: block;"></ion-icon>
+      <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)" style="display: block;"></ion-icon>
+      </div>
+    </h4>
+    <span contenteditable>${schoolYears}</span>
+    <p class="timeline-text" contenteditable>
+      ${schoolDescription}
+    </p>
+  `;
+
+  // Add the new item at the beginning of the list
+  educationList.insertBefore(newItem, educationList.firstChild);
+
+  closeModal('editEducationModal');
+});
+
+document.getElementById('experienceForm').addEventListener('submit', function (event) {
+  event.preventDefault();
+  const experienceTitle = document.getElementById('experienceTitle').value;
+  const experienceYears = document.getElementById('experienceYears').value;
+  const experienceDescription = document.getElementById('experienceDescription').value;
+
+  // Update or add the experience item in the list
+  const experienceList = document.getElementById('experience-list');
+  const newItem = document.createElement('li');
+  newItem.className = 'timeline-item';
+  newItem.innerHTML = `
+    <h4 class="h4 timeline-item-title" contenteditable>${experienceTitle}
+      <div class="icons-info">
+        <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)" style="display: block;"></ion-icon>
+        <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)" style="display: block;"></ion-icon>
+      </div>
+    </h4>
+    <span contenteditable>${experienceYears}</span>
+    <p class="timeline-text" contenteditable>
+    ${experienceDescription}
+    </p>
+  `;
+
+  // Add the new item at the beginning of the list
+  experienceList.insertBefore(newItem, experienceList.firstChild);
+
+  closeModal('editExperienceModal');
+});
+
+document.getElementById('skillsForm').addEventListener('submit', function (event) {
+  event.preventDefault();
+  const skillName = document.getElementById('skillName').value;
+  const skillPercentage = document.getElementById('skillPercentage').value;
+
+  // Find the skills item with the corresponding skill name
+  const skillsList = document.getElementById('skills-list');
+  const skillsItems = skillsList.getElementsByClassName('skills-item');
+
+  let targetItem = null;
+  for (let i = 0; i < skillsItems.length; i++) {
+    const titleElement = skillsItems[i].querySelector('.title-wrapper h5');
+    if (titleElement.innerText === skillName) {
+      targetItem = skillsItems[i];
+      break;
     }
   }
 
-  // Function to handle the removal functionality
-  function handleRemove(element) {
-    if (confirm("Are you sure you want to remove this element?")) {
-      element.remove();
-    }
+  if (targetItem) {
+    // Update the existing skill item
+    targetItem.querySelector('.title-wrapper data').setAttribute('value', skillPercentage);
+    targetItem.querySelector('.skill-progress-fill').style.width = `${skillPercentage}%`;
+  } else {
+    // Create a new skill item
+    const newItem = document.createElement('li');
+    newItem.className = 'skills-item';
+    newItem.innerHTML = `
+      <div class="title-wrapper">
+        <h5 class="h5" contenteditable>${skillName}</h5>
+        <data value="${skillPercentage}" contenteditable>${skillPercentage}%</data>
+        <div class="icons-info">
+          <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)" style="display: block;"></ion-icon>
+          <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)" style="display: block;"></ion-icon>
+        </div>
+      </div>
+      <div class="skill-progress-bg">
+        <div class="skill-progress-fill" style="width: ${skillPercentage}%;" data-value="${skillPercentage}"></div>
+      </div>
+    `;
+
+    // Add the new item at the end of the list
+    skillsList.appendChild(newItem);
   }
 
-  // Add event listeners to enable editing and removing on hover
-  document.addEventListener("DOMContentLoaded", function () {
-    var hoverElements = document.querySelectorAll("[data-editable]");
-    hoverElements.forEach(function (element) {
-      element.addEventListener("mouseover", function () {
-        this.classList.add("hovered");
-      });
-      element.addEventListener("mouseout", function () {
-        this.classList.remove("hovered");
-      });
-      element.addEventListener("click", function (event) {
-        event.stopPropagation();
-        var icon = this.querySelector(".edit-icon");
-        if (icon) {
-          icon.remove();
-        } else {
-          var editIcon = document.createElement("span");
-          editIcon.classList.add("edit-icon");
-          editIcon.innerHTML = '<ion-icon name="create-outline"></ion-icon>';
-          this.appendChild(editIcon);
-          editIcon.addEventListener("click", function (event) {
-            event.stopPropagation();
-            handleEdit(element);
-          });
-        }
-        
-      });
-      element.addEventListener("dbclick", function (event) {
-        event.stopPropagation();
-        handleRemove(element);
-      });
-    });
+  closeModal('editSkillsModal');
+});
+
+
+
+document.getElementById('educationForm').addEventListener('submit', function (event) {
+  event.preventDefault();
+  const schoolName = document.getElementById('schoolName').value;
+  const schoolYears = document.getElementById('schoolYears').value;
+  const schoolDescription = document.getElementById('schoolDescription').value;
+
+  // Create a new window to display the result
+  const newWindow = window.open('', '_blank');
+
+  // Set the content of the new window
+  newWindow.document.write(`
+<h2>${schoolName}</h2>
+<p>${schoolYears}</p>
+<p>${schoolDescription}</p>
+`);
+
+  closeModal('editEducationModal');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Delet list___________________________________________________________________________
+function deleteInfo(element) {
+  var listItem = element.closest('li');
+
+  // Ask for confirmation
+  var confirmDelete = confirm("Are you sure you want to delete this block?");
+  if (confirmDelete) {
+    listItem.remove();
+  }
+}
+
+
+
+
+
+//Edit list___________________________________________________________________________
+function enableEdit(element) {
+  const listItem = element.closest('.skills-item, .timeline-item, .contacts-list, .about-text');
+  const editableElements = listItem.querySelectorAll('[contenteditable]');
+
+  // Enable editing for each contenteditable element within the list item
+  editableElements.forEach((el) => {
+    el.setAttribute('contenteditable', 'true');
+    el.classList.add('editing');
   });
 
+  // Change the icon to a save icon
+  element.setAttribute('name', 'save-outline');
+  element.setAttribute('onclick', 'saveEdit(this)');
+}
+
+function saveEdit(element) {
+  const listItem = element.closest('.skills-item, .timeline-item, .contacts-list, .about-text');
+  const editableElements = listItem.querySelectorAll('[contenteditable]');
+
+  // Disable editing for each contenteditable element within the list item
+  editableElements.forEach((el) => {
+    el.setAttribute('contenteditable', 'false');
+    el.classList.remove('editing');
+  });
+
+  // Change the icon back to an edit icon
+  element.setAttribute('name', 'create-outline');
+  element.setAttribute('onclick', 'enableEdit(this)');
+}
 
 
+// JavaScript code to update the progress bar width
+document.addEventListener("DOMContentLoaded", function () {
+  const dataElements = document.querySelectorAll("data");
+  dataElements.forEach(function (element) {
+    element.addEventListener("input", function () {
+      const newValue = parseInt(element.textContent, 10);
+      if (!isNaN(newValue)) {
+        const parentSkillItem = element.closest(".skills-item");
+        const skillProgressFill = parentSkillItem.querySelector(".skill-progress-fill");
+        const initialWidth = skillProgressFill.getAttribute("data-value");
+        skillProgressFill.style.width = newValue + "%";
+        skillProgressFill.setAttribute("data-value", newValue);
+      }
+    });
+  });
+});
 
 
+// Get all elements with the 'contenteditable' attribute
+var editableElements = document.querySelectorAll('[contenteditable="true"]');
 
-
-
-
+// Add an event listener to each element
+editableElements.forEach(function(element) {
+  element.addEventListener('input', function() {
+    // Check if the content is true
+    if (element.textContent.trim() === 'true') {
+      element.classList.add('highlight');
+    } else {
+      element.classList.remove('highlight');
+    }
+  });
+});
 
 
 

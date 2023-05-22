@@ -124,9 +124,11 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:richard@example.com" class="contact-link" data-editable>Sofien.laghouanem@gmail.com</a>
+              <p class="contact-title">Email
+                <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+              </p>
+            
+              <a href="mailto:richard@example.com" class="contact-link" contenteditable="false">Sofien.laghouanem@gmail.com</a>
             </div>
 
           </li>
@@ -138,9 +140,11 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link" data-editable>+(216) 20 031 474</a>
+              <p class="contact-title">Phone
+                <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+              </p>
+            
+              <a href="tel:+12133522795" class="contact-link" contenteditable="false">+(216) 20 031 474</a>
             </div>
 
           </li>
@@ -154,7 +158,7 @@
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
 
-              <time datetime="1982-06-23" data-editable>August 28, 2002</time>
+              <time datetime="1982-06-23">August 28, 2002</time>
             </div>
 
           </li>
@@ -166,9 +170,10 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address data-editable>Tunisia, Rades</address>
+              <p class="contact-title" >Location
+                <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+              </p>
+              <address contenteditable="false">Tunisia, Rades</address>
             </div>
 
           </li>
@@ -180,31 +185,31 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="https://www.facebook.com/profile.php?id=100087552471601" class="social-link" data-editable>
+            <a href="https://www.facebook.com/profile.php?id=100087552471601" class="social-link">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://www.instagram.com/sofyen.laghouanem/" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://github.com/CodeWizard-404" class="social-link">
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://stackoverflow.com/users/18180193/sofyen-laghouanem" class="social-link">
               <ion-icon name="logo-stackoverflow"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://www.linkedin.com/in/sofyen-laghouanem-39aaa6240/" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
@@ -307,16 +312,16 @@
         <header>
           <h2 class="h2 article-title">About me</h2>
         </header>
-
-        <section class="about-text">
-          <p>
+        <section class="about-text" >
+          <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+          <p contenteditable="false">
             Hello and welcome to my portfolio website. I am a passionate and driven individual with a strong interest in
             IT and programming. I am constantly learning and improving my skills, and I love taking on new challenges.
             Through this website, I hope to showcase my work, skills, and achievements, and provide a glimpse into who I
             am as a person and a professional
           </p>
 
-          <p>
+          <p contenteditable="false">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, facilis ipsum sit et nostrum
             libero tempora ullam blanditiis hic exercitationem voluptatum esse provident eaque eligendi dignissimos
             expedita amet, nisi quis. Aut exercitationem dignissimos provident, veniam facere quo blanditiis doloremque
@@ -546,29 +551,20 @@
         -->
 
         <div class="modal-container" data-modal-container>
-
           <div class="overlay" data-overlay></div>
-
           <section class="testimonials-modal">
-
             <button class="modal-close-btn" data-modal-close-btn>
               <ion-icon name="close-outline"></ion-icon>
             </button>
-
             <div class="modal-img-wrapper">
               <figure class="modal-avatar-box">
                 <img src="./assets/images/my-avatar.png" alt="name lastname" width="80" data-modal-img>
               </figure>
-
               <img src="./assets/images/quote.png" alt="quote icon">
             </div>
-
             <div class="modal-content">
-
               <h4 class="h3 modal-title" data-modal-title>name lastname</h4>
-
               <time datetime="2023-01-01">1 January, 2023</time>
-
               <div data-modal-text>
                 <p>
                   Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
@@ -578,11 +574,8 @@
                   elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
                 </p>
               </div>
-
             </div>
-
           </section>
-
         </div>
 
 
@@ -646,9 +639,11 @@
       </article>
 
 
-      <!-- #RESUME
+      <!-- 
+        #RESUME
       -->
-      <!--
+
+
       <article class="resume" data-page="resume">
 
         <header>
@@ -661,222 +656,53 @@
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High School Fahat Hached Rades</h4>
-
-              <span>2018 — 2021</span>
-
-              <p class="timeline-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
-                quod?
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">ISG Gabes</h4>
-
-              <span>2021 — 2022</span>
-
-              <p class="timeline-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
-                quod?
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">ISET Charguia</h4>
-
-              <span>2022 — Now</span>
-
-              <p class="timeline-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
-                quod?
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Test</h4>
-
-              <span>2015 — Present</span>
-
-              <p class="timeline-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam recusandae repellat quidem ea eos!
-                Atque unde ducimus, error laboriosam dignissimos debitis, doloribus quo fuga doloremque earum distinctio
-                molestiae provident libero.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Test</h4>
-
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta architecto saepe consequuntur omnis sequi
-                tempore necessitatibus ullam, accusamus suscipit animi odio tenetur perferendis soluta hic beatae autem
-                ut laborum placeat.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Test</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A in placeat dolorem commodi libero voluptatem.
-                Maxime dolore nisi nulla earum adipisci accusamus, recusandae perferendis optio, consectetur dolores
-                consequatur numquam repellendus.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">HTML, CSS, JS</h5>
-                <data value="65">65%</data>
+            <h3 class="h3">Education  
+              <div class="edit-icon" onclick="editEducation()">
+                <ion-icon name="create" class="button-edit"></ion-icon>
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">C Programming</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Linux</h5>
-                <data value="40">40%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 40%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Excel, PowerPoint</h5>
-                <data value="60">60%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>-->
-
-
-      <article class="resume" data-page="resume" >
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education <div class="edit-icon" onclick="editEducation()"><ion-icon name="create"
-                  style="display: none;"></ion-icon></div>
             </h3>
           </div>
 
           <ol id="education-list" class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">High School Fahat Hached Rades</h4>
-              <span>2018 — 2021</span>
-              <p class="timeline-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
-                quod?
+              <h4 class="h4 timeline-item-title" contenteditable="false">ISET Charguia
+                <div class="icons-info">
+                <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                </div>
+              </h4>
+              <span contenteditable="false"> 2022 — 2023</span>
+              <p class="timeline-text" contenteditable="false">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis quod?
               </p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">ISG Gabes</h4>
-              <span>2021 — 2022</span>
-              <p class="timeline-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
-                quod?
+              <h4 class="h4 timeline-item-title" contenteditable="false">ISG Gabes
+                <div class="icons-info">
+                <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                </div>
+              </h4>
+              <span contenteditable="false"> 2021 — 2022</span>
+              <p class="timeline-text" contenteditable="false">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis quod?
               </p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">ISET Charguia</h4>
-              <span>2022 — Now</span>
-              <p class="timeline-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
-                quod?
+              <h4 class="h4 timeline-item-title" contenteditable="false">High School Fahat Hached Rades
+                <div class="icons-info">
+                <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                </div>
+              </h4>
+              <span contenteditable="false"> 2018 — 2021</span>
+              <p class="timeline-text" contenteditable="false">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis quod?
               </p>
             </li>
           </ol>
+          
+          
 
         </section>
 
@@ -888,280 +714,198 @@
             </div>
 
             <h3 class="h3">Experience
-              <div class="edit-icon" onclick="editExperience()"><ion-icon name="create"
-                  style="display: none;"></ion-icon></div>
+              <div class="edit-icon" onclick="editExperience()">
+                <ion-icon name="create" class="button-edit"></ion-icon>
+              </div>
             </h3>
           </div>
 
           <ol id="experience-list" class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Test</h4>
-              <span>2015 — Present</span>
-              <p class="timeline-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam recusandae repellat quidem ea eos!
-                Atque
-                unde ducimus, error laboriosam dignissimos debitis, doloribus quo fuga doloremque earum distinctio
-                molestiae
-                provident libero.
+              <h4 class="h4 timeline-item-title" contenteditable="false">Test
+                <div class="icons-info">
+                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                </div>
+              </h4>
+              <span contenteditable="false">2015 — 2020</span>
+              <p class="timeline-text" contenteditable="false">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam recusandae repellat quidem ea eos! Atque unde ducimus, error laboriosam dignissimos debitis, doloribus quo fuga doloremque earum distinctio molestiae provident libero.
               </p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Test</h4>
-              <span>2013 — 2015</span>
-              <p class="timeline-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta architecto saepe consequuntur omnis sequi
-                tempore necessitatibus ullam, accusamus suscipit animi odio tenetur perferendis soluta hic beatae autem
-                ut
-                laborum placeat.
+              <h4 class="h4 timeline-item-title" contenteditable="false">Test
+                <div class="icons-info">
+                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                </div>
+              </h4>
+              <span contenteditable="false">2013 — 2015</span>
+              <p class="timeline-text" contenteditable="false">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta architecto saepe consequuntur omnis sequi tempore necessitatibus ullam, accusamus suscipit animi odio tenetur perferendis soluta hic beatae autem ut laborum placeat.
               </p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Test</h4>
-              <span>2010 — 2013</span>
-              <p class="timeline-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A in placeat dolorem commodi libero voluptatem.
-                Maxime dolore nisi nulla earum adipisci accusamus, recusandae perferendis optio, consectetur dolores
-                consequatur numquam repellendus.
+              <h4 class="h4 timeline-item-title" contenteditable="false">Test
+                <div class="icons-info">
+                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                </div>
+              </h4>
+              <span contenteditable="false">2010 — 2013</span>
+              <p class="timeline-text" contenteditable="false">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A in placeat dolorem commodi libero voluptatem. Maxime dolore nisi nulla earum adipisci accusamus, recusandae perferendis optio, consectetur dolores consequatur numquam repellendus.
               </p>
             </li>
           </ol>
+          
 
         </section>
 
         <section class="skill">
 
-          <h3 class="h3 skills-title">My skills <div class="edit-icon" onclick="editSkills()"><ion-icon name="create"
-                style="display: none;"></ion-icon></div>
+          <h3 class="h3 skills-title">My skills 
+            <div class="edit-icon" onclick="editSkills()">
+              <ion-icon name="create" class="button-edit"></ion-icon>
+            </div>
           </h3>
-
 
           <ul id="skills-list" class="skills-list content-card">
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">HTML, CSS, JS</h5>
-                <data value="65">65%</data>
+                <h5 class="h5" contenteditable="false">HTML, CSS, JS</h5>
+                <data value="65" contenteditable="false">65%</data>
+                <div class="icons-info">
+                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                </div>
               </div>
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
+                <div class="skill-progress-fill" style="width: 65%;" data-value="65"></div>
               </div>
             </li>
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">C Programming</h5>
-                <data value="80">80%</data>
+                <h5 class="h5" contenteditable="false">C Programming</h5>
+                <data value="80" contenteditable="false">80%</data>
+                <div class="icons-info">
+                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                </div>
               </div>
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
+                <div class="skill-progress-fill" style="width: 80%;" data-value="80"></div>
               </div>
             </li>
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Linux</h5>
-                <data value="40">40%</data>
+                <h5 class="h5" contenteditable="false">Linux</h5>
+                <data value="40" contenteditable="false">40%</data>
+                <div class="icons-info">
+                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                </div>
               </div>
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 40%;"></div>
+                <div class="skill-progress-fill" style="width: 40%;" data-value="40"></div>
               </div>
             </li>
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Excel, PowerPoint</h5>
-                <data value="60">60%</data>
+                <h5 class="h5" contenteditable="false">Excel, PowerPoint</h5>
+                <data value="60" contenteditable="false">60%</data>
+                <div class="icons-info">
+                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                </div>
               </div>
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
+                <div class="skill-progress-fill" style="width: 60%;" data-value="60"></div>
               </div>
             </li>
           </ul>
+          
 
         </section>
 
+        <!-- 
+        #Edit Modal 
+      -->
+
+        <div class="modal-container-set">
+
+          <!-- Edit Education Modal -->
+          <div id="editEducationModal" class="modal modal-container active" data-modal-container
+            style="display: none; ">
+            <div class="overlay active" data-overlay style="z-index: -1;"></div>
+            <div class="modal-content testimonials-modal active">
+              <span class="close modal-close-btn" data-modal-close-btn
+                onclick="closeModal('editEducationModal')">&times;</span>
+              <h4>Add Education</h4>
+              <form id="educationForm" class="content-edit form ">
+                <label for="schoolName">School Name:</label>
+                <input type="text" id="schoolName" class="form-input" required placeholder="University">
+                <label for="schoolYears">Years:</label>
+                <input type="text" pattern="\d{4} - \d{4}" placeholder="YYYY - YYYY" id="schoolYears" class="form-input"
+                  required>
+                <label for="schoolDescription">Description:</label>
+                <textarea id="schoolDescription" class="form-input" required></textarea>
+                <button type="submit">Save</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Edit Experience Modal -->
+          <div id="editExperienceModal" class="modal modal-container active" data-modal-container
+            style="display: none; ">
+            <div class="overlay active" data-overlay style="z-index: -1;"></div>
+            <div class="modal-content testimonials-modal active">
+              <span class="close modal-close-btn" data-modal-close-btn
+                onclick="closeModal('editExperienceModal')">&times;</span>
+              <h4>Add Experience</h4>
+              <form id="experienceForm">
+                <label for="experienceTitle">Title:</label>
+                <input type="text" id="experienceTitle" class="form-input" required placeholder="Assotiation">
+                <label for="experienceYears">Years:</label>
+                <input type="text" pattern="\d{4} - \d{4}" placeholder="YYYY - YYYY" id="experienceYears"
+                  class="form-input" required>
+                <label for="experienceDescription">Description:</label>
+                <textarea id="experienceDescription" class="form-input" required></textarea>
+                <button type="submit">Save</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Edit Skills Modal -->
+          <div id="editSkillsModal" class="modal modal-container active" data-modal-container style="display: none; ">
+            <div class="overlay active" data-overlay style="z-index: -1;"></div>
+            <div class="modal-content testimonials-modal active">
+              <span class="close modal-close-btn" data-modal-close-btn
+                onclick="closeModal('editSkillsModal')">&times;</span>
+              <h4>Add Skills</h4>
+              <form id="skillsForm">
+                <label for="skillName">Skill Name:</label>
+                <input type="text" id="skillName" class="form-input" required>
+                <label for="skillPercentage">Percentage:</label>
+                <input type="range" min="0" max="100" value="50" id="skillPercentage" class="form-input in-range"
+                  required>
+                <div id="rangeValue">50%</div>
+                <button type="submit">Save</button>
+              </form>
+            </div>
+          </div>
+          <script>
+            const rangeInput = document.getElementById("skillPercentage");
+            const rangeValue = document.getElementById("rangeValue");
+
+            rangeInput.addEventListener("input", function () {
+              rangeValue.innerHTML = this.value + "%";
+            });
+          </script>
+
+
+        </div>
       </article>
-
-      <!-- Edit Education Modal -->
-      <div id="editEducationModal" class="modal" style="display: none;">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('editEducationModal')">&times;</span>
-          <h4>Edit Education</h4>
-          <form id="educationForm">
-            <label for="schoolName">School Name:</label>
-            <input type="text" id="schoolName" required>
-            <label for="schoolYears">Years:</label>
-            <input type="text" id="schoolYears" required>
-            <label for="schoolDescription">Description:</label>
-            <textarea id="schoolDescription" required></textarea>
-            <button type="submit">Save</button>
-          </form>
-        </div>
-      </div>
-
-      <!-- Edit Experience Modal -->
-      <div id="editExperienceModal" class="modal" style="display: none;">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('editExperienceModal')">&times;</span>
-          <h4>Edit Experience</h4>
-          <form id="experienceForm">
-            <label for="experienceTitle">Title:</label>
-            <input type="text" id="experienceTitle" required>
-            <label for="experienceYears">Years:</label>
-            <input type="text" id="experienceYears" required>
-            <label for="experienceDescription">Description:</label>
-            <textarea id="experienceDescription" required></textarea>
-            <button type="submit">Save</button>
-          </form>
-        </div>
-      </div>
-
-      <!-- Edit Skills Modal -->
-      <div id="editSkillsModal" class="modal" style="display: none;">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('editSkillsModal')">&times;</span>
-          <h4>Edit Skills</h4>
-          <form id="skillsForm">
-            <label for="skillName">Skill Name:</label>
-            <input type="text" id="skillName" required>
-            <label for="skillPercentage">Percentage:</label>
-            <input type="text" id="skillPercentage" required>
-            <button type="submit">Save</button>
-          </form>
-        </div>
-      </div>
-
-      <script>
-
-        function editEducation() {
-          const educationModal = document.getElementById('editEducationModal');
-          educationModal.style.display = 'block';
-        }
-
-        function editExperience() {
-          const experienceModal = document.getElementById('editExperienceModal');
-          experienceModal.style.display = 'block';
-        }
-
-        function editSkills() {
-          const skillsModal = document.getElementById('editSkillsModal');
-          skillsModal.style.display = 'block';
-        }
-
-        function closeModal(modalId) {
-          const modal = document.getElementById(modalId);
-          modal.style.display = 'none';
-        }
-
-
-        document.getElementById('educationForm').addEventListener('submit', function (event) {
-          event.preventDefault();
-          const schoolName = document.getElementById('schoolName').value;
-          const schoolYears = document.getElementById('schoolYears').value;
-          const schoolDescription = document.getElementById('schoolDescription').value;
-
-          // Update or add the education item in the list
-          const educationList = document.getElementById('education-list');
-          const newItem = document.createElement('li');
-          newItem.className = 'timeline-item';
-          newItem.innerHTML = `
-            <h4 class="h4 timeline-item-title">${schoolName}</h4>
-            <span>${schoolYears}</span>
-            <p class="timeline-text">${schoolDescription}</p>
-          `;
-
-          // Add the new item at the beginning of the list
-          educationList.insertBefore(newItem, educationList.firstChild);
-
-          closeModal('editEducationModal');
-        });
-
-        document.getElementById('experienceForm').addEventListener('submit', function (event) {
-          event.preventDefault();
-          const experienceTitle = document.getElementById('experienceTitle').value;
-          const experienceYears = document.getElementById('experienceYears').value;
-          const experienceDescription = document.getElementById('experienceDescription').value;
-
-          // Update or add the experience item in the list
-          const experienceList = document.getElementById('experience-list');
-          const newItem = document.createElement('li');
-          newItem.className = 'timeline-item';
-          newItem.innerHTML = `
-            <h4 class="h4 timeline-item-title">${experienceTitle}</h4>
-            <span>${experienceYears}</span>
-            <p class="timeline-text">${experienceDescription}</p>
-          `;
-
-          // Add the new item at the beginning of the list
-          experienceList.insertBefore(newItem, experienceList.firstChild);
-
-          closeModal('editExperienceModal');
-        });
-
-        document.getElementById('skillsForm').addEventListener('submit', function (event) {
-          event.preventDefault();
-          const skillName = document.getElementById('skillName').value;
-          const skillPercentage = document.getElementById('skillPercentage').value;
-
-          // Find the skills item with the corresponding skill name
-          const skillsList = document.getElementById('skills-list');
-          const skillsItems = skillsList.getElementsByClassName('skills-item');
-
-          let targetItem = null;
-          for (let i = 0; i < skillsItems.length; i++) {
-            const titleElement = skillsItems[i].querySelector('.title-wrapper h5');
-            if (titleElement.innerText === skillName) {
-              targetItem = skillsItems[i];
-              break;
-            }
-          }
-
-          if (targetItem) {
-            // Update the existing skill item
-            targetItem.querySelector('.title-wrapper data').setAttribute('value', skillPercentage);
-            targetItem.querySelector('.skill-progress-fill').style.width = `${skillPercentage}%`;
-          } else {
-            // Create a new skill item
-            const newItem = document.createElement('li');
-            newItem.className = 'skills-item';
-            newItem.innerHTML = `
-              <div class="title-wrapper">
-                <h5 class="h5">${skillName}</h5>
-                <data value="${skillPercentage}">${skillPercentage}%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: ${skillPercentage}%;"></div>
-              </div>
-            `;
-
-            // Add the new item at the end of the list
-            skillsList.appendChild(newItem);
-          }
-
-          closeModal('editSkillsModal');
-        });
-
-
-
-
-        document.getElementById('educationForm').addEventListener('submit', function (event) {
-          event.preventDefault();
-          const schoolName = document.getElementById('schoolName').value;
-          const schoolYears = document.getElementById('schoolYears').value;
-          const schoolDescription = document.getElementById('schoolDescription').value;
-
-          // Create a new window to display the result
-          const newWindow = window.open('', '_blank');
-
-          // Set the content of the new window
-          newWindow.document.write(`
-    <h2>${schoolName}</h2>
-    <p>${schoolYears}</p>
-    <p>${schoolDescription}</p>
-  `);
-
-          closeModal('editEducationModal');
-        });
-
-      </script>
-
-
 
 
 
@@ -1170,7 +914,7 @@
 
 
       <!--
-        - #PORTFOLIO
+         #PORTFOLIO
       -->
 
       <article class="portfolio" data-page="portfolio">
@@ -1251,7 +995,11 @@
 
           </div>
 
-          <ul class="project-list">
+          <ul class="project-list" id="project-list">
+
+            <li>
+              <button id="addButton">+</button>
+            </li>
 
             <li class="project-item  active" data-filter-item data-category="web">
 
@@ -1434,30 +1182,45 @@
               </a>
             </li>
 
+
           </ul>
 
         </section>
 
         <!--------------------------------------------------------------------------------------------------->
-        <button id="addButton" >Add Project</button>
+        
+        <div class="modal-container-set">
+        <div id="formContainer" class="modal modal-container active" style="display: none;">
+          <div class="overlay active" data-overlay style="z-index: -1;"></div>
+          <div class="modal-content testimonials-modal active">
+            <span class="close modal-close-btn" data-modal-close-btn onclick="closeModal('formContainer')">&times;</span>
+            <h4>Add Project</h4>
+            <form id="blockForm" class="content-edit form">
 
-        <div id="formContainer" style="display: none;">
-          <form id="blockForm">
-            <label for="imageUrl">Image URL:</label>
-            <input type="file" id="imageUrl" accept="images" required>
+              <label for="imageUrl">Image:</label>
+              <input type="file" id="imageUrl" name="image" accept="image/*" class="form-input"required>
+              
 
-            <label for="linkUrl">Link URL:</label>
-            <input type="text" id="linkUrl" required>
-
-            <label for="title">Title:</label>
-            <input type="text" id="title" required>
-
-            <label for="category">Category:</label>
-            <input type="text" id="category" required>
-
-            <button type="submit">Add Block</button>
-          </form>
+              
+              <label for="linkUrl">Link URL:</label>
+              <input type="text" id="linkUrl" class="form-input"required>
+              <label for="title">Title:</label>
+              <input type="text" id="title" class="form-input"required>
+              <label for="category">Category:</label><br>
+              <select id="category" class="choose form-input " required>
+                <option value="web">Web</option>
+                <option value="app">App</option>
+                <option value="game">Game</option>
+                <option value="mobile">Mobile</option>
+                <option value="other">Other</option>
+              </select>
+              
+              <button type="submit" class="save-project">Save</button>
+            </form>
+          </div>
         </div>
+      </div>
+        
 
       </article>
 
@@ -1510,10 +1273,6 @@
           <h2 class="h2 article-title">Admin Login</h2>
         </header>
 
-
-
-
-
         <section class="contact-form">
 
           <h3 class="h3 Admin-log">Restrected access</h3>
@@ -1547,7 +1306,7 @@
 
       </article>
 
-              <!--
+      <!--
         - #API Github
       -->
 
@@ -1558,24 +1317,18 @@
         </header>
 
         <section class="contact-form">
-
           <h3 class="h3 ">Github API</h3>
           <section class="about-text">
             <p>
-              Github APIs( or Github ReST APIs) are the APIs that you can use to interact with GitHub. They allow you to create and manage repositories, branches, issues, pull requests, and many more. For fetching publicly available information (like public repositories, user profiles, etc.), you can call the API. For other actions, you need to provide an authenticated token.
+              Github APIs( or Github ReST APIs) are the APIs that you can use to interact with GitHub. They allow you to
+              create and manage repositories, branches, issues, pull requests, and many more. For fetching publicly
+              available information (like public repositories, user profiles, etc.), you can call the API. For other
+              actions, you need to provide an authenticated token.
             </p><br><br>
           </section>
           <div id="github-user-info"></div>
-<div id="github-repo-list"></div>
-
-
+          <div id="github-repo-list"></div>
         </section>
-        
-
-        
-        
-        
-
       </article>
 
   </main>
@@ -1583,7 +1336,7 @@
 
 
   <!--
-    - custom js link
+    - Js link
   -->
   <script src="./assets/js/script.js"></script>
 
