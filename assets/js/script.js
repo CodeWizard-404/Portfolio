@@ -173,10 +173,11 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     validContainer.classList.add('success-message');
 
     // Show all ion-icon elements
-    var ionIcons = document.querySelectorAll('.edit-icon ion-icon');
     var allicons = document.querySelectorAll('ion-icon');
+    var projectadd = document.getElementById("List-add");
     allicons.forEach(function (icon) {
       icon.style.display = 'block';
+      projectadd.style.display = 'block'
     });
     /*
         setTimeout(function() {
@@ -412,8 +413,9 @@ document.getElementById('blockForm').addEventListener('submit', function(event) 
       </a>
     `;
 
-    // Add the new project item to the project list
-    projectList.appendChild(newProjectItem);
+    // Insert the new project item as the second item in the project list
+    const secondItem = projectList.children[1];
+    projectList.insertBefore(newProjectItem, secondItem);
 
     // Close the modal
     closeModal('formContainer');
@@ -422,6 +424,8 @@ document.getElementById('blockForm').addEventListener('submit', function(event) 
   // Read the image file as a data URL
   reader.readAsDataURL(imageFile);
 });
+
+
 
 
 
