@@ -27,20 +27,20 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    $(document).ready(function() {
-      $('.download-button').click(function() {
+    $(document).ready(function () {
+      $('.download-button').click(function () {
         var resumeButton = $('.navbar-list .navbar-link:contains("Resume")');
         var resumeArticle = $('article.resume');
-        
+
         // Remove 'active' class from all navbar links
         $('.navbar-list .navbar-link').removeClass('active');
-        
+
         // Add 'active' class to the 'Resume' navbar link
         resumeButton.addClass('active');
-        
+
         // Remove 'active' class from all articles
         $('article').removeClass('active');
-        
+
         // Add 'active' class to the 'resume' article
         resumeArticle.addClass('active');
 
@@ -50,6 +50,15 @@
     });
   </script>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FPGS836K8N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-FPGS836K8N');
+  </script>
 </head>
 
 <body>
@@ -99,7 +108,8 @@
 
         <button class="download-button">
           <div class="docs">
-            <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+            <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2"
+              stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
               <polyline points="14 2 14 8 20 8"></polyline>
               <line y2="13" x2="8" y1="13" x1="16"></line>
@@ -109,7 +119,8 @@
             <a href="#">Resume</a>
           </div>
           <div class="download">
-            <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+            <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2"
+              stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
               <polyline points="7 10 12 15 17 10"></polyline>
               <line y2="3" x2="12" y1="15" x1="12"></line>
@@ -148,8 +159,9 @@
               <p class="contact-title">Email
                 <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
               </p>
-            
-              <a href="mailto:richard@example.com" class="contact-link" contenteditable="false">Sofien.laghouanem@gmail.com</a>
+
+              <a href="mailto:richard@example.com" class="contact-link"
+                contenteditable="false">Sofien.laghouanem@gmail.com</a>
             </div>
 
           </li>
@@ -164,7 +176,7 @@
               <p class="contact-title">Phone
                 <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
               </p>
-            
+
               <a href="tel:+12133522795" class="contact-link" contenteditable="false">+(216) 20 031 474</a>
             </div>
 
@@ -191,7 +203,7 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title" >Location
+              <p class="contact-title">Location
                 <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
               </p>
               <address contenteditable="false">Tunisia, Rades</address>
@@ -324,7 +336,7 @@
         <header>
           <h2 class="h2 article-title">About me</h2>
         </header>
-        <section class="about-text" >
+        <section class="about-text">
           <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
           <p contenteditable="false">
             Hello and welcome to my portfolio website. I am a passionate and driven individual with a strong interest in
@@ -668,7 +680,7 @@
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
-            <h3 class="h3">Education  
+            <h3 class="h3">Education
               <div class="edit-icon" onclick="editEducation()">
                 <ion-icon name="create" class="button-edit"></ion-icon>
               </div>
@@ -679,42 +691,45 @@
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title" contenteditable="false">ISET Charguia
                 <div class="icons-info">
-                <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
-                <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
                 </div>
               </h4>
               <span contenteditable="false"> 2022 — 2023</span>
               <p class="timeline-text" contenteditable="false">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis quod?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
+                quod?
               </p>
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title" contenteditable="false">ISG Gabes
                 <div class="icons-info">
-                <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
-                <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
                 </div>
               </h4>
               <span contenteditable="false"> 2021 — 2022</span>
               <p class="timeline-text" contenteditable="false">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis quod?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
+                quod?
               </p>
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title" contenteditable="false">High School Fahat Hached Rades
                 <div class="icons-info">
-                <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
-                <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
                 </div>
               </h4>
               <span contenteditable="false"> 2018 — 2021</span>
               <p class="timeline-text" contenteditable="false">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis quod?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
+                quod?
               </p>
             </li>
           </ol>
-          
-          
+
+
 
         </section>
 
@@ -742,7 +757,9 @@
               </h4>
               <span contenteditable="false">2015 — 2020</span>
               <p class="timeline-text" contenteditable="false">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam recusandae repellat quidem ea eos! Atque unde ducimus, error laboriosam dignissimos debitis, doloribus quo fuga doloremque earum distinctio molestiae provident libero.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam recusandae repellat quidem ea eos!
+                Atque unde ducimus, error laboriosam dignissimos debitis, doloribus quo fuga doloremque earum distinctio
+                molestiae provident libero.
               </p>
             </li>
             <li class="timeline-item">
@@ -754,7 +771,9 @@
               </h4>
               <span contenteditable="false">2013 — 2015</span>
               <p class="timeline-text" contenteditable="false">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta architecto saepe consequuntur omnis sequi tempore necessitatibus ullam, accusamus suscipit animi odio tenetur perferendis soluta hic beatae autem ut laborum placeat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta architecto saepe consequuntur omnis sequi
+                tempore necessitatibus ullam, accusamus suscipit animi odio tenetur perferendis soluta hic beatae autem
+                ut laborum placeat.
               </p>
             </li>
             <li class="timeline-item">
@@ -766,17 +785,19 @@
               </h4>
               <span contenteditable="false">2010 — 2013</span>
               <p class="timeline-text" contenteditable="false">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A in placeat dolorem commodi libero voluptatem. Maxime dolore nisi nulla earum adipisci accusamus, recusandae perferendis optio, consectetur dolores consequatur numquam repellendus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A in placeat dolorem commodi libero voluptatem.
+                Maxime dolore nisi nulla earum adipisci accusamus, recusandae perferendis optio, consectetur dolores
+                consequatur numquam repellendus.
               </p>
             </li>
           </ol>
-          
+
 
         </section>
 
         <section class="skill">
 
-          <h3 class="h3 skills-title">My skills 
+          <h3 class="h3 skills-title">My skills
             <div class="edit-icon" onclick="editSkills()">
               <ion-icon name="create" class="button-edit"></ion-icon>
             </div>
@@ -836,7 +857,7 @@
               </div>
             </li>
           </ul>
-          
+
 
         </section>
 
@@ -1010,7 +1031,7 @@
           <ul class="project-list" id="project-list">
 
             <li id="List-add" style="display: none;">
-              <button id="addButton" >+</button>
+              <button id="addButton">+</button>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web">
@@ -1200,39 +1221,40 @@
         </section>
 
         <!--------------------------------------------------------------------------------------------------->
-        
+
         <div class="modal-container-set">
-        <div id="formContainer" class="modal modal-container active" style="display: none;">
-          <div class="overlay active" data-overlay style="z-index: -1;"></div>
-          <div class="modal-content testimonials-modal active">
-            <span class="close modal-close-btn" data-modal-close-btn onclick="closeModal('formContainer')">&times;</span>
-            <h4>Add Project</h4>
-            <form id="blockForm" class="content-edit form">
+          <div id="formContainer" class="modal modal-container active" style="display: none;">
+            <div class="overlay active" data-overlay style="z-index: -1;"></div>
+            <div class="modal-content testimonials-modal active">
+              <span class="close modal-close-btn" data-modal-close-btn
+                onclick="closeModal('formContainer')">&times;</span>
+              <h4>Add Project</h4>
+              <form id="blockForm" class="content-edit form">
 
-              <label for="imageUrl">Image:</label>
-              <input type="file" id="imageUrl" name="image" accept="image/*" class="form-input"required>
-              
+                <label for="imageUrl">Image:</label>
+                <input type="file" id="imageUrl" name="image" accept="image/*" class="form-input" required>
 
-              
-              <label for="linkUrl">Link URL:</label>
-              <input type="text" id="linkUrl" class="form-input"required>
-              <label for="title">Title:</label>
-              <input type="text" id="title" class="form-input"required>
-              <label for="category">Category:</label><br>
-              <select id="category" class="choose form-input " required>
-                <option value="web">Web</option>
-                <option value="app">App</option>
-                <option value="game">Game</option>
-                <option value="mobile">Mobile</option>
-                <option value="other">Other</option>
-              </select>
-              
-              <button type="submit" class="save-project">Save</button>
-            </form>
+
+
+                <label for="linkUrl">Link URL:</label>
+                <input type="text" id="linkUrl" class="form-input" required>
+                <label for="title">Title:</label>
+                <input type="text" id="title" class="form-input" required>
+                <label for="category">Category:</label><br>
+                <select id="category" class="choose form-input " required>
+                  <option value="web">Web</option>
+                  <option value="app">App</option>
+                  <option value="game">Game</option>
+                  <option value="mobile">Mobile</option>
+                  <option value="other">Other</option>
+                </select>
+
+                <button type="submit" class="save-project">Save</button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-        
+
 
       </article>
 
