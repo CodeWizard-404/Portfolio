@@ -748,6 +748,11 @@ function displayGitHubUserData(userData, reposData) {
   const githubUserInfo = document.getElementById('github-user-info');
   const githubRepoList = document.getElementById('github-repo-list');
 
+  if (userData.message === 'Not Found') {
+    alert('Username does not exist.');
+    return;
+  }
+
   const userHtml = `
     <h2>${userData.name}</h2>
     <img src="${userData.avatar_url}" alt="Profile Picture">
@@ -773,6 +778,7 @@ function displayGitHubUserData(userData, reposData) {
   githubRepoList.innerHTML = reposHtml;
 }
 
+
 const username = 'CodeWizard-404';
 
 fetchGitHubUserData(username)
@@ -783,5 +789,26 @@ fetchGitHubUserData(username)
     console.error('Error:', error);
   });
 
+
+  
+// API function change
+
+function fetchUserData() {
+  const usernameInput = document.getElementById('username-input');
+  let username = usernameInput.value.trim();
+
+  // Set default value if no username input is provided
+  if (username === '') {
+    username = 'CodeWizard-404';
+  }
+
+  fetchGitHubUserData(username)
+    .then(({ userData, reposData }) => {
+      displayGitHubUserData(userData, reposData);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
 
 

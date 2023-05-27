@@ -338,8 +338,8 @@
       <nav class="navbar">
 
         <ul class="navbar-list">
-          <li class="navbar-item">
-            <button class="navbar-link " data-nav-link="About">About</button>
+          <li class="navbar-item ">
+            <button class="navbar-link active" data-nav-link="About">About</button>
           </li>
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link="Resume">Resume</button>
@@ -1336,7 +1336,7 @@
         - #ADMIN
       -->
 
-      <article class="about" data-page="admin">
+      <article class="about active" data-page="admin">
 
         <header>
           <h2 class="h2 article-title">Admin Login</h2>
@@ -1395,6 +1395,11 @@
               actions, you need to provide an authenticated token.
             </p><br><br>
           </section>
+          <div class="input-container">
+            <input type="text" id="username-input" class="input-field" placeholder="GitHub username" value="CodeWizard-404">
+            <button onclick="fetchUserData()" class="fetch-button">Fetch Data</button>
+          </div>
+
           <div id="github-user-info"></div>
           <div id="github-repo-list"></div>
         </section>

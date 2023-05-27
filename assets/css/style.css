@@ -743,6 +743,12 @@ main {
 
 
 
+
+
+
+
+
+
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
@@ -1673,6 +1679,7 @@ textarea.form-input::-webkit-resizer {
 
 #github-user-info {
   border: 1px solid var(--white-1);
+  border-radius: 15px;
   padding: 20px;
   margin-bottom: 20px;
   font-family: Arial, sans-serif;
@@ -1749,7 +1756,31 @@ textarea.form-input::-webkit-resizer {
 
 
 
+.input-container {
+  margin-bottom: 10px;
+  display: flex;
+  color: white;
+}
 
+.input-field {
+  color: var(--white-1);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--white-1);
+  border-radius: 12px;
+  width: 200px;
+}
+
+.fetch-button {
+  margin-left: 5px;
+  padding: 10px 10px;
+  font-size: 16px;
+  background-color: #331fd0;
+  color: white;
+  border: none;
+  border-radius: 11px;
+  cursor: pointer;
+}
 
 
 
