@@ -236,6 +236,11 @@
   color: white;
 }
 
+.hidden-for-print {
+  display: none !important;
+}
+
+
 
 /*-----------------------------------*\
   #RESET

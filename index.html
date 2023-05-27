@@ -31,6 +31,10 @@
       $('.download-button').click(function () {
         var resumeButton = $('.navbar-list .navbar-link:contains("Resume")');
         var resumeArticle = $('article.resume');
+        var sidebar = $('aside.sidebar');
+        var toggleSwitch = $('.toggle-switch');
+        var downloadButton = $('.download-button');
+        var navbar = $('nav.navbar');
 
         // Remove 'active' class from all navbar links
         $('.navbar-list .navbar-link').removeClass('active');
@@ -44,10 +48,41 @@
         // Add 'active' class to the 'resume' article
         resumeArticle.addClass('active');
 
+        // Add 'active' class to the sidebar
+        sidebar.addClass('active');
+
+        // Hide the toggle switch before printing
+        toggleSwitch.addClass('hidden-for-print');
+
+        // Hide the download button before printing
+        downloadButton.addClass('hidden-for-print');
+
+        // Hide the navbar before printing
+        navbar.addClass('hidden-for-print');
+
         // Download the page as a PDF file
         window.print();
+
+        // Show the toggle switch again after printing
+        toggleSwitch.removeClass('hidden-for-print');
+
+        // Show the download button again after printing
+        downloadButton.removeClass('hidden-for-print');
+
+        // Show the navbar again after printing
+        setTimeout(function () {
+          navbar.removeClass('hidden-for-print');
+        }, 100);
+
+        // Remove 'active' class from the sidebar after printing
+        setTimeout(function () {
+          sidebar.removeClass('active');
+        }, 100);
       });
     });
+
+
+
   </script>
 
   <!-- Google tag (gtag.js) -->
