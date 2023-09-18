@@ -3,11 +3,11 @@
 
 
 // element toggle function_____________________________________________________
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+var elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 // sidebar variables____________________________________________________________
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+var sidebar = document.querySelector("[data-sidebar]");
+var sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
@@ -17,18 +17,18 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 
 // Feedback variables__________________________________________________________
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
+var testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+var modalContainer = document.querySelector("[data-modal-container]");
+var modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+var overlay = document.querySelector("[data-overlay]");
 
 // modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
+var modalImg = document.querySelector("[data-modal-img]");
+var modalTitle = document.querySelector("[data-modal-title]");
+var modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
-const testimonialsModalFunc = function () {
+var testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
@@ -67,10 +67,10 @@ overlay.addEventListener("click", testimonialsModalFunc);
 
 
 // Filter Projects_____________________________________________________________
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
+var select = document.querySelector("[data-select]");
+var selectItems = document.querySelectorAll("[data-select-item]");
+var selectValue = document.querySelector("[data-selecct-value]");
+var filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 select.addEventListener("click", function () { elementToggleFunc(this); });
 
@@ -87,9 +87,9 @@ for (let i = 0; i < selectItems.length; i++) {
 }
 
 // filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
+var filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function (selectedValue) {
+var filterFunc = function (selectedValue) {
 
   for (let i = 0; i < filterItems.length; i++) {
 
@@ -134,9 +134,9 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 // contact form variables_________________________________________________
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+var form = document.querySelector("[data-form]");
+var formInputs = document.querySelectorAll("[data-form-input]");
+var formBtn = document.querySelector("[data-form-btn]");
 
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
@@ -224,8 +224,8 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 
 
 // page navigation variables_____________________________________________
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+var navigationLinks = document.querySelectorAll("[data-nav-link]");
+var pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
@@ -260,8 +260,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 //invert color
 function toggleRootStyles() {
-  const checkbox = document.querySelector('.checkbox');
-  const rootStyles = `
+  var checkbox = document.querySelector('.checkbox');
+  var rootStyles = `
   :root {
 
     --bg-gradient-onyx: linear-gradient(to bottom right,
@@ -315,18 +315,18 @@ function toggleRootStyles() {
   `;
 
   //invert images
-  const avatarImages = document.querySelectorAll('.avatar-box img');
-  const defaultImageSrc = './assets/images/PDP.jpg';
-  const newImageSrc = './assets/images/PDP..jpg';
-  const reversedImageFilter = 'invert(100%)';
-  const iconImages = document.querySelectorAll('.service-icon-box img');
+  var avatarImages = document.querySelectorAll('.avatar-box img');
+  var defaultImageSrc = './assets/images/PDP.jpg';
+  var newImageSrc = './assets/images/PDP..jpg';
+  var reversedImageFilter = 'invert(100%)';
+  var iconImages = document.querySelectorAll('.service-icon-box img');
 
   checkbox.addEventListener('change', () => {
-    const styleElement = document.querySelector('#rootStyles');
+    var styleElement = document.querySelector('#rootStyles');
 
     if (checkbox.checked) {
       if (!styleElement) {
-        const style = document.createElement('style');
+        var style = document.createElement('style');
         style.id = 'rootStyles';
         style.innerHTML = rootStyles;
         document.head.appendChild(style);
@@ -377,23 +377,23 @@ document.getElementById('blockForm').addEventListener('submit', function(event) 
   event.preventDefault();
 
   // Get form input values
-  const imageUrl = document.getElementById('imageUrl').value;
-  const linkUrl = document.getElementById('linkUrl').value;
-  const title = document.getElementById('title').value;
-  const category = document.getElementById('category').value;
+  var imageUrl = document.getElementById('imageUrl').value;
+  var linkUrl = document.getElementById('linkUrl').value;
+  var title = document.getElementById('title').value;
+  var category = document.getElementById('category').value;
 
   // Get the uploaded image file
-  const fileInput = document.getElementById('imageUrl');
-  const imageFile = fileInput.files[0];
+  var fileInput = document.getElementById('imageUrl');
+  var imageFile = fileInput.files[0];
 
   // Create a new FileReader object to read the image file
-  const reader = new FileReader();
+  var reader = new FileReader();
 
   // Set up the FileReader onload event
   reader.onload = function() {
     // Create a new project item
-    const projectList = document.getElementById('project-list');
-    const newProjectItem = document.createElement('li');
+    var projectList = document.getElementById('project-list');
+    var newProjectItem = document.createElement('li');
     newProjectItem.className = 'project-item active';
     newProjectItem.setAttribute('data-filter-item', '');
     newProjectItem.setAttribute('data-category', category);
@@ -414,7 +414,7 @@ document.getElementById('blockForm').addEventListener('submit', function(event) 
     `;
 
     // Insert the new project item as the second item in the project list
-    const secondItem = projectList.children[1];
+    var secondItem = projectList.children[1];
     projectList.insertBefore(newProjectItem, secondItem);
 
     // Close the modal
@@ -436,11 +436,11 @@ document.getElementById('blockForm').addEventListener('submit', function(event) 
 // remove project______________________________________________________
 
 // Get all the project items
-const projectItems = document.querySelectorAll('.project-item');
+var projectItems = document.querySelectorAll('.project-item');
 
 // Add event listeners to each project item
 projectItems.forEach(item => {
-  const removeButton = item.querySelector('.remove-button');
+  var removeButton = item.querySelector('.remove-button');
 
   // Add event listener for hovering over the project item
   item.addEventListener('mouseover', () => {
@@ -479,35 +479,35 @@ projectItems.forEach(item => {
 
 
 function editEducation() {
-  const educationModal = document.getElementById('editEducationModal');
+  var educationModal = document.getElementById('editEducationModal');
   educationModal.style.display = 'block';
 }
 
 function editExperience() {
-  const experienceModal = document.getElementById('editExperienceModal');
+  var experienceModal = document.getElementById('editExperienceModal');
   experienceModal.style.display = 'block';
 }
 
 function editSkills() {
-  const skillsModal = document.getElementById('editSkillsModal');
+  var skillsModal = document.getElementById('editSkillsModal');
   skillsModal.style.display = 'block';
 }
 
 function closeModal(modalId) {
-  const modal = document.getElementById(modalId);
+  var modal = document.getElementById(modalId);
   modal.style.display = 'none';
 }
 
 
 document.getElementById('educationForm').addEventListener('submit', function (event) {
   event.preventDefault();
-  const schoolName = document.getElementById('schoolName').value;
-  const schoolYears = document.getElementById('schoolYears').value;
-  const schoolDescription = document.getElementById('schoolDescription').value;
+  var schoolName = document.getElementById('schoolName').value;
+  var schoolYears = document.getElementById('schoolYears').value;
+  var schoolDescription = document.getElementById('schoolDescription').value;
 
   // Update or add the education item in the list
-  const educationList = document.getElementById('education-list');
-  const newItem = document.createElement('li');
+  var educationList = document.getElementById('education-list');
+  var newItem = document.createElement('li');
   newItem.className = 'timeline-item';
   newItem.innerHTML = `
     <h4 class="h4 timeline-item-title" contenteditable>${schoolName}
@@ -530,13 +530,13 @@ document.getElementById('educationForm').addEventListener('submit', function (ev
 
 document.getElementById('experienceForm').addEventListener('submit', function (event) {
   event.preventDefault();
-  const experienceTitle = document.getElementById('experienceTitle').value;
-  const experienceYears = document.getElementById('experienceYears').value;
-  const experienceDescription = document.getElementById('experienceDescription').value;
+  var experienceTitle = document.getElementById('experienceTitle').value;
+  var experienceYears = document.getElementById('experienceYears').value;
+  var experienceDescription = document.getElementById('experienceDescription').value;
 
   // Update or add the experience item in the list
-  const experienceList = document.getElementById('experience-list');
-  const newItem = document.createElement('li');
+  var experienceList = document.getElementById('experience-list');
+  var newItem = document.createElement('li');
   newItem.className = 'timeline-item';
   newItem.innerHTML = `
     <h4 class="h4 timeline-item-title" contenteditable>${experienceTitle}
@@ -559,16 +559,16 @@ document.getElementById('experienceForm').addEventListener('submit', function (e
 
 document.getElementById('skillsForm').addEventListener('submit', function (event) {
   event.preventDefault();
-  const skillName = document.getElementById('skillName').value;
-  const skillPercentage = document.getElementById('skillPercentage').value;
+  var skillName = document.getElementById('skillName').value;
+  var skillPercentage = document.getElementById('skillPercentage').value;
 
   // Find the skills item with the corresponding skill name
-  const skillsList = document.getElementById('skills-list');
-  const skillsItems = skillsList.getElementsByClassName('skills-item');
+  var skillsList = document.getElementById('skills-list');
+  var skillsItems = skillsList.getElementsByClassName('skills-item');
 
   let targetItem = null;
   for (let i = 0; i < skillsItems.length; i++) {
-    const titleElement = skillsItems[i].querySelector('.title-wrapper h5');
+    var titleElement = skillsItems[i].querySelector('.title-wrapper h5');
     if (titleElement.innerText === skillName) {
       targetItem = skillsItems[i];
       break;
@@ -581,7 +581,7 @@ document.getElementById('skillsForm').addEventListener('submit', function (event
     targetItem.querySelector('.skill-progress-fill').style.width = `${skillPercentage}%`;
   } else {
     // Create a new skill item
-    const newItem = document.createElement('li');
+    var newItem = document.createElement('li');
     newItem.className = 'skills-item';
     newItem.innerHTML = `
       <div class="title-wrapper">
@@ -608,12 +608,12 @@ document.getElementById('skillsForm').addEventListener('submit', function (event
 
 document.getElementById('educationForm').addEventListener('submit', function (event) {
   event.preventDefault();
-  const schoolName = document.getElementById('schoolName').value;
-  const schoolYears = document.getElementById('schoolYears').value;
-  const schoolDescription = document.getElementById('schoolDescription').value;
+  var schoolName = document.getElementById('schoolName').value;
+  var schoolYears = document.getElementById('schoolYears').value;
+  var schoolDescription = document.getElementById('schoolDescription').value;
 
   // Create a new window to display the result
-  const newWindow = window.open('', '_blank');
+  var newWindow = window.open('', '_blank');
 
   // Set the content of the new window
   newWindow.document.write(`
@@ -657,8 +657,8 @@ function deleteInfo(element) {
 
 //Edit list___________________________________________________________________________
 function enableEdit(element) {
-  const listItem = element.closest('.skills-item, .timeline-item, .contacts-list, .about-text');
-  const editableElements = listItem.querySelectorAll('[contenteditable]');
+  var listItem = element.closest('.skills-item, .timeline-item, .contacts-list, .about-text');
+  var editableElements = listItem.querySelectorAll('[contenteditable]');
 
   // Enable editing for each contenteditable element within the list item
   editableElements.forEach((el) => {
@@ -672,8 +672,8 @@ function enableEdit(element) {
 }
 
 function saveEdit(element) {
-  const listItem = element.closest('.skills-item, .timeline-item, .contacts-list, .about-text');
-  const editableElements = listItem.querySelectorAll('[contenteditable]');
+  var listItem = element.closest('.skills-item, .timeline-item, .contacts-list, .about-text');
+  var editableElements = listItem.querySelectorAll('[contenteditable]');
 
   // Disable editing for each contenteditable element within the list item
   editableElements.forEach((el) => {
@@ -689,14 +689,14 @@ function saveEdit(element) {
 
 // JavaScript code to update the progress bar width
 document.addEventListener("DOMContentLoaded", function () {
-  const dataElements = document.querySelectorAll("data");
+  var dataElements = document.querySelectorAll("data");
   dataElements.forEach(function (element) {
     element.addEventListener("input", function () {
-      const newValue = parseInt(element.textContent, 10);
+      var newValue = parseInt(element.textContent, 10);
       if (!isNaN(newValue)) {
-        const parentSkillItem = element.closest(".skills-item");
-        const skillProgressFill = parentSkillItem.querySelector(".skill-progress-fill");
-        const initialWidth = skillProgressFill.getAttribute("data-value");
+        var parentSkillItem = element.closest(".skills-item");
+        var skillProgressFill = parentSkillItem.querySelector(".skill-progress-fill");
+        var initialWidth = skillProgressFill.getAttribute("data-value");
         skillProgressFill.style.width = newValue + "%";
         skillProgressFill.setAttribute("data-value", newValue);
       }
@@ -728,11 +728,11 @@ editableElements.forEach(function(element) {
 
 //API___________________________________________________________________________
 function fetchGitHubUserData(username) {
-  const userUrl = `https://api.github.com/users/${username}`;
-  const reposUrl = `https://api.github.com/users/${username}/repos`;
+  var userUrl = `https://api.github.com/users/${username}`;
+  var reposUrl = `https://api.github.com/users/${username}/repos`;
 
-  const userPromise = fetch(userUrl).then(response => response.json());
-  const reposPromise = fetch(reposUrl).then(response => response.json());
+  var userPromise = fetch(userUrl).then(response => response.json());
+  var reposPromise = fetch(reposUrl).then(response => response.json());
 
   return Promise.all([userPromise, reposPromise])
     .then(([userData, reposData]) => {
@@ -745,15 +745,15 @@ function fetchGitHubUserData(username) {
 }
 
 function displayGitHubUserData(userData, reposData) {
-  const githubUserInfo = document.getElementById('github-user-info');
-  const githubRepoList = document.getElementById('github-repo-list');
+  var githubUserInfo = document.getElementById('github-user-info');
+  var githubRepoList = document.getElementById('github-repo-list');
 
   if (userData.message === 'Not Found') {
     alert('Username does not exist.');
     return;
   }
 
-  const userHtml = `
+  var userHtml = `
     <h2>${userData.name}</h2>
     <img src="${userData.avatar_url}" alt="Profile Picture">
     <p>Username: ${userData.login}</p>
@@ -764,7 +764,7 @@ function displayGitHubUserData(userData, reposData) {
 
   githubUserInfo.innerHTML = userHtml;
 
-  const reposHtml = reposData.map(repo => {
+  var reposHtml = reposData.map(repo => {
     return `
       <div>
         <h3>${repo.name}</h3>
@@ -779,7 +779,7 @@ function displayGitHubUserData(userData, reposData) {
 }
 
 
-const username = 'CodeWizard-404';
+var username = 'CodeWizard-404';
 
 fetchGitHubUserData(username)
   .then(({ userData, reposData }) => {
@@ -794,7 +794,7 @@ fetchGitHubUserData(username)
 // API function change
 
 function fetchUserData() {
-  const usernameInput = document.getElementById('username-input');
+  var usernameInput = document.getElementById('username-input');
   let username = usernameInput.value.trim();
 
   // Set default value if no username input is provided

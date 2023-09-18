@@ -374,7 +374,7 @@
           <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
           <p contenteditable="false">
             Hello and welcome to my portfolio website. I am a passionate and driven individual with a strong interest in
-            IT and programming. I am constantly learning and improving my skills, and I love taking on new challenges.
+            IT and programming. I am varantly learning and improving my skills, and I love taking on new challenges.
             Through this website, I hope to showcase my work, skills, and achievements, and provide a glimpse into who I
             am as a person and a professional
           </p>
@@ -962,8 +962,8 @@
             </div>
           </div>
           <script>
-            const rangeInput = document.getElementById("skillPercentage");
-            const rangeValue = document.getElementById("rangeValue");
+            var rangeInput = document.getElementById("skillPercentage");
+            var rangeValue = document.getElementById("rangeValue");
 
             rangeInput.addEventListener("input", function () {
               rangeValue.innerHTML = this.value + "%";
