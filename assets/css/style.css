@@ -2753,3 +2753,89 @@ textarea.form-input::-webkit-resizer {
   margin-left: 0.5rem;
   cursor: pointer;
 }*/
+
+
+
+
+
+
+
+
+
+
+
+.skills {
+  padding: 20px;
+  background-color: var(--eerie-black-2); /* Dark background for dark mode */
+  border-radius: 8px;
+}
+
+.skills-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-1); /* Font size from root */
+  margin-bottom: 20px;
+  color: var(--white-1); /* Light text for dark mode */
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px; /* Space between cards */
+}
+
+.skill-card {
+  background: var(--jet); /* Dark card background for dark mode */
+  border-radius: 10px;
+  box-shadow: var(--shadow-1); /* Shadow for dark mode */
+  transition: transform var(--transition-1), box-shadow var(--transition-1);
+  padding: 20px;
+  position: relative;
+  overflow: hidden; /* Prevent overflow for visual effects */
+}
+
+.skill-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: var(--shadow-2); /* Enhanced shadow on hover */
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color:var(--white-1);
+}
+
+.skill-header ion-icon {
+  font-size: 30px;
+  color: var(--blue-crayola); /* Light icon color for dark mode */
+  margin-right: 10px; /* Space between icon and title */
+  transition: transform var(--transition-1);
+}
+
+.skill-header:hover ion-icon {
+  transform: rotate(20deg); /* Slight rotation on hover */
+}
+
+.skill-list {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  color: var(--light-gray); /* Light text color for dark mode */
+}
+
+.skill-list li {
+  margin-bottom: 10px; /* Space between items */
+  padding: 5px; /* Inner spacing for items */
+  border-left: 4px solid var(--blue-crayola); /* Light border color for dark mode */
+  transition: background var(--transition-1);
+}
+
+.skill-list li:hover {
+  background: rgba(76, 84, 175, 0.1); /* Keep this hover effect */
+}
+
+.edit-icon {
+  cursor: pointer; /* Pointer cursor for edit icon */
+  color: var(--red-dead); /* Light color for edit icon in dark mode */
+}

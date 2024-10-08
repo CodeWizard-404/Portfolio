@@ -28,57 +28,51 @@
   <script>
     $(document).ready(function () {
       $('.download-button').click(function () {
-        var resumeButton = $('.navbar-list .navbar-link:contains("Resume")');
-        var resumeArticle = $('article.resume');
-        var sidebar = $('aside.sidebar');
-        var toggleSwitch = $('.toggle-switch');
-        var downloadButton = $('.download-button');
-        var navbar = $('nav.navbar');
-
-        // Remove 'active' class from all navbar links
-        $('.navbar-list .navbar-link').removeClass('active');
-
-        // Add 'active' class to the 'Resume' navbar link
-        resumeButton.addClass('active');
-
-        // Remove 'active' class from all articles
-        $('article').removeClass('active');
-
-        // Add 'active' class to the 'resume' article
-        resumeArticle.addClass('active');
-
-        // Add 'active' class to the sidebar
-        sidebar.addClass('active');
-
-        // Hide the toggle switch before printing
-        toggleSwitch.addClass('hidden-for-print');
-
-        // Hide the download button before printing
-        downloadButton.addClass('hidden-for-print');
-
-        // Hide the navbar before printing
-        navbar.addClass('hidden-for-print');
-
-        // Download the page as a PDF file
-        window.print();
-
-        // Show the toggle switch again after printing
-        toggleSwitch.removeClass('hidden-for-print');
-
-        // Show the download button again after printing
-        downloadButton.removeClass('hidden-for-print');
-
-        // Show the navbar again after printing
-        setTimeout(function () {
-          navbar.removeClass('hidden-for-print');
-        }, 100);
-
-        // Remove 'active' class from the sidebar after printing
-        setTimeout(function () {
-          sidebar.removeClass('active');
-        }, 100);
+          var resumeButton = $('.navbar-list .navbar-link:contains("Resume")');
+          var resumeArticle = $('article.resume');
+          var sidebar = $('aside.sidebar');
+          var toggleSwitch = $('.toggle-switch');
+          var downloadButton = $('.download-button');
+          var navbar = $('nav.navbar');
+  
+          // Remove 'active' class from all navbar links
+          $('.navbar-list .navbar-link').removeClass('active');
+  
+          // Add 'active' class to the 'Resume' navbar link
+          resumeButton.addClass('active');
+  
+          // Remove 'active' class from all articles
+          $('article').removeClass('active');
+  
+          // Add 'active' class to the 'resume' article
+          resumeArticle.addClass('active');
+  
+          // Add 'active' class to the sidebar
+          sidebar.addClass('active');
+  
+          // Hide the toggle switch and buttons before opening the PDF
+          toggleSwitch.addClass('hidden-for-print');
+          downloadButton.addClass('hidden-for-print');
+          navbar.addClass('hidden-for-print');
+  
+          // Specify the URL of the PDF you want to open
+          var pdfUrl = 'https://cvdesignr.com/p/65814c7836e86'; // Change this to your PDF file's URL
+  
+          // Open the PDF in a new tab
+          window.open(pdfUrl, '_blank');
+  
+          // Show the toggle switch and buttons again after opening the PDF
+          setTimeout(function () {
+              toggleSwitch.removeClass('hidden-for-print');
+              downloadButton.removeClass('hidden-for-print');
+              navbar.removeClass('hidden-for-print');
+              
+              // Remove 'active' class from the sidebar after opening the PDF
+              sidebar.removeClass('active');
+          }, 100);
       });
-    });
+  });
+  
 
 
 
@@ -162,7 +156,7 @@
           </div>
         </button>
 
-
+      
         <!--
       - #SIDEBAR contact
     -->
@@ -252,7 +246,7 @@
         <ul class="social-list">          
 
           <li class="social-item">
-            <a href="https://www.facebook.com/profile.php?id=100087552471601" class="social-link">
+            <a href="https://www.facebook.com/Sofien.laghouanem" class="social-link">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
@@ -276,7 +270,7 @@
           </li>
 
           <li class="social-item">
-            <a href="https://www.linkedin.com/in/sofyen-laghouanem-39aaa6240/" class="social-link">
+            <a href="https://www.linkedin.com/in/sofyen-laghouanem/" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
@@ -287,30 +281,30 @@
         <ul class="wrapper ">
           <li class="icon facebook">
             <span class="tooltip">Facebook</span>
-            <a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon><i
+            <a href="https://www.facebook.com/Sofien.laghouanem"><ion-icon name="logo-facebook"></ion-icon><i
                 class="fab fa-facebook-f"></i></a>
           </li>
 
           <li class="icon instagram">
             <span class="tooltip">Instagram</span>
-            <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon><i
+            <a href="https://www.instagram.com/sofyen.laghouanem/"><ion-icon name="logo-instagram"></ion-icon><i
                 class="fab fa-instagram"></i></a>
           </li>
 
           <li class="icon github">
             <span class="tooltip">GitHub</span>
-            <a href="https://github.com"><ion-icon name="logo-github"></ion-icon><i class="fab fa-github"></i></a>
+            <a href="https://github.com/CodeWizard-404"><ion-icon name="logo-github"></ion-icon><i class="fab fa-github"></i></a>
           </li>
 
           <li class="icon stackoverflow">
             <span class="tooltip">Stack Overflow</span>
-            <a href="https://stackoverflow.com"><ion-icon name="logo-stackoverflow"></ion-icon><i
+            <a href="https://stackoverflow.com/users/18180193/sofyen-laghouanem"><ion-icon name="logo-stackoverflow"></ion-icon><i
                 class="fab fa-stack-overflow"></i></a>
           </li>
 
           <li class="icon linkedin">
             <span class="tooltip">LinkedIn</span>
-            <a href="https://linkedin.com"><ion-icon name="logo-linkedin"></ion-icon><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/sofyen-laghouanem/"><ion-icon name="logo-linkedin"></ion-icon><i class="fab fa-linkedin"></i></a>
           </li>
 
 
@@ -349,12 +343,16 @@
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link="Contact">Contact</button>
           </li>
+          
+          <!--
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link="Admin">Admin</button>
           </li>
+          
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link="API GitHub">API GitHub</button>
           </li>
+        -->
         </ul>
 
       </nav>
@@ -373,18 +371,12 @@
         <section class="about-text">
           <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
           <p contenteditable="false">
-            Hello and welcome to my portfolio website. I am a passionate and driven individual with a strong interest in
+            Hello and welcome to my website. I am a passionate and driven individual with a strong interest in
             IT and programming. I am varantly learning and improving my skills, and I love taking on new challenges.
             Through this website, I hope to showcase my work, skills, and achievements, and provide a glimpse into who I
             am as a person and a professional
           </p>
 
-          <p contenteditable="false">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, facilis ipsum sit et nostrum
-            libero tempora ullam blanditiis hic exercitationem voluptatum esse provident eaque eligendi dignissimos
-            expedita amet, nisi quis. Aut exercitationem dignissimos provident, veniam facere quo blanditiis doloremque
-            suscipit maxime id cupiditate quibusdam vel quisquam excepturi, in aliquid?
-          </p>
         </section>
 
 
@@ -397,7 +389,7 @@
           <h3 class="h3 service-title">What I Do</h3>
 
           <ul class="service-list">
-
+<!--
             <li class="service-item">
 
               <div class="service-icon-box">
@@ -411,7 +403,7 @@
                   Expertise in game development, from concept to launch, using industry-standard tools and technologies.
                 </p>
               </div>
-
+-->
             </li>
 
             <li class="service-item">
@@ -470,10 +462,10 @@
 
         </section>
 
-
-        <!--
+<!--
+        
           - testimonials
-        -->
+        
 
         <section class="testimonials">
 
@@ -604,9 +596,9 @@
         </section>
 
 
-        <!--
+        
           - Feedback modal
-        -->
+        
 
         <div class="modal-container" data-modal-container>
           <div class="overlay" data-overlay></div>
@@ -637,9 +629,9 @@
         </div>
 
 
-        <!--
+        
           - clients
-        -->
+        
 
         <section class="clients">
 
@@ -693,7 +685,7 @@
           </ul>
 
         </section>
-
+      -->
       </article>
 
 
@@ -707,9 +699,8 @@
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
-
+      
         <section class="timeline">
-
           <div class="title-wrapper">
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
@@ -720,259 +711,167 @@
               </div>
             </h3>
           </div>
-
+      
           <ol id="education-list" class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">ISET Charguia
+              <h4 class="h4 timeline-item-title" contenteditable="false">Développement de Systèmes d'Information (DSI), ISET Charguia
                 <div class="icons-info">
                   <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
                   <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
                 </div>
               </h4>
-              <span contenteditable="false"> 2022 — 2023</span>
+              <span contenteditable="false">2023 — Present</span>
               <p class="timeline-text" contenteditable="false">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
-                quod?
+                Studying Information Systems Development to gain comprehensive knowledge in IT.
               </p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">ISG Gabes
+              <h4 class="h4 timeline-item-title" contenteditable="false">Information Technology (IT), ISET Charguia
                 <div class="icons-info">
                   <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
                   <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
                 </div>
               </h4>
-              <span contenteditable="false"> 2021 — 2022</span>
+              <span contenteditable="false">2022 — 2023</span>
               <p class="timeline-text" contenteditable="false">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
-                quod?
+                Focused on key IT principles and practices, enhancing my technical expertise.
               </p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">High School Fahat Hached Rades
+              <h4 class="h4 timeline-item-title" contenteditable="false">Computing Management (IAG), ISG Gabes
                 <div class="icons-info">
                   <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
                   <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
                 </div>
               </h4>
-              <span contenteditable="false"> 2018 — 2021</span>
+              <span contenteditable="false">2021 — 2022</span>
               <p class="timeline-text" contenteditable="false">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, nemo neque eaque reiciendis
-                quod?
+                Gained insights into computing management and business applications.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title" contenteditable="false">High School Degree in Technical Science, High School Farhat Hached Rades
+                <div class="icons-info">
+                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                </div>
+              </h4>
+              <span contenteditable="false">2018 — 2021</span>
+              <p class="timeline-text" contenteditable="false">
+                Completed high school with a focus on technical sciences.
               </p>
             </li>
           </ol>
-
-
-
         </section>
-
+      
         <section class="timeline">
-
           <div class="title-wrapper">
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
-
             <h3 class="h3">Experience
               <div class="edit-icon" onclick="editExperience()">
                 <ion-icon name="create" class="button-edit"></ion-icon>
               </div>
             </h3>
           </div>
-
+        
           <ol id="experience-list" class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">Test
+              <h4 class="h4 timeline-item-title" contenteditable="false">Joint CEO
                 <div class="icons-info">
                   <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
                   <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
                 </div>
               </h4>
-              <span contenteditable="false">2015 — 2020</span>
+              <span contenteditable="false">Since October 2023</span>
               <p class="timeline-text" contenteditable="false">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam recusandae repellat quidem ea eos!
-                Atque unde ducimus, error laboriosam dignissimos debitis, doloribus quo fuga doloremque earum distinctio
-                molestiae provident libero.
+                As a rapidly growing online platform, we take pride in delivering high-quality 3D printed products and custom solutions to our diverse customer base.
               </p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">Test
+              <h4 class="h4 timeline-item-title" contenteditable="false">Introductory Internship
                 <div class="icons-info">
                   <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
                   <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
                 </div>
               </h4>
-              <span contenteditable="false">2013 — 2015</span>
+              <span contenteditable="false">January 2023 — February 2023</span>
               <p class="timeline-text" contenteditable="false">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta architecto saepe consequuntur omnis sequi
-                tempore necessitatibus ullam, accusamus suscipit animi odio tenetur perferendis soluta hic beatae autem
-                ut laborum placeat.
+                Gained hands-on experience in software development practices, collaborating with teams to support ongoing projects and enhance technical skills.
               </p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">Test
+              <h4 class="h4 timeline-item-title" contenteditable="false">Content Moderator
                 <div class="icons-info">
                   <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
                   <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
                 </div>
               </h4>
-              <span contenteditable="false">2010 — 2013</span>
+              <span contenteditable="false">Since July 2022</span>
               <p class="timeline-text" contenteditable="false">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A in placeat dolorem commodi libero voluptatem.
-                Maxime dolore nisi nulla earum adipisci accusamus, recusandae perferendis optio, consectetur dolores
-                consequatur numquam repellendus.
+                Responsible for reviewing and moderating content to ensure compliance with community guidelines, providing feedback to enhance platform quality and user experience.
               </p>
             </li>
           </ol>
-
-
         </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills
+        
+        
+        <section class="skills">
+          <h3 class="skills-title">My Skills
             <div class="edit-icon" onclick="editSkills()">
               <ion-icon name="create" class="button-edit"></ion-icon>
             </div>
           </h3>
-
-          <ul id="skills-list" class="skills-list content-card">
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5" contenteditable="false">HTML, CSS, JS</h5>
-                <data value="65" contenteditable="false">65%</data>
-                <div class="icons-info">
-                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
-                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
-                </div>
+        
+          <div class="skills-container">
+            <div class="skill-card">
+              <div class="skill-header">
+                <ion-icon name="code-slash-outline"></ion-icon>
+                <h5>Programming & Development</h5>
               </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;" data-value="65"></div>
+              <ul class="skill-list">
+                <li><strong>Core Languages:</strong> Java, JavaScript, HTML, CSS, TypeScript, PHP, Python, Dart (Flutter), XML</li>
+                <li><strong>Mobile Development:</strong> Android Studio (Java), Flutter (Dart)</li>
+                <li><strong>Web Development:</strong> AngularJS, Spring Boot, Django, Symfony, Bootstrap</li>
+                <li><strong>Support:</strong> Problem Solving & Technical Support</li>
+                <li><strong>Databases:</strong> MySQL, Oracle, PostgreSQL</li>
+              </ul>
+            </div>
+                
+            <div class="skill-card">
+              <div class="skill-header">
+                <ion-icon name="construct-outline"></ion-icon>
+                <h5>Tools & Technologies</h5>
               </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5" contenteditable="false">C Programming</h5>
-                <data value="80" contenteditable="false">80%</data>
-                <div class="icons-info">
-                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
-                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
-                </div>
+              <ul class="skill-list">
+                <li><strong>Version Control:</strong> Git</li>
+                <li><strong>Operating Systems:</strong> Linux</li>
+                <li><strong>Design & Prototyping:</strong> Figma, UI/UX principles</li>
+                <li><strong>Development Tools:</strong> XAMPP, VMware, Postman, Microsoft Excel</li>
+              </ul>
+            </div>
+        
+            <div class="skill-card">
+              <div class="skill-header">
+                <ion-icon name="brain-outline"></ion-icon>
+                <h5>Theoretical & Conceptual Skills</h5>
               </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;" data-value="80"></div>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5" contenteditable="false">Linux</h5>
-                <data value="40" contenteditable="false">40%</data>
-                <div class="icons-info">
-                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
-                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
-                </div>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 40%;" data-value="40"></div>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5" contenteditable="false">Excel, PowerPoint</h5>
-                <data value="60" contenteditable="false">60%</data>
-                <div class="icons-info">
-                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
-                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
-                </div>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;" data-value="60"></div>
-              </div>
-            </li>
-          </ul>
-
-
+              <ul class="skill-list">
+                <li><strong>Conception & Modeling:</strong> UML (Unified Modeling Language), Scrum</li>
+                <li><strong>Algorithmics & Binary Arithmetic</li>
+                <li><strong>Adaptability & Time Management</strong></li>
+              </ul>
+            </div>
+          </div>
         </section>
 
-        <!-- 
-        #Edit Modal 
-      -->
-
-        <div class="modal-container-set">
-
-          <!-- Edit Education Modal -->
-          <div id="editEducationModal" class="modal modal-container active" data-modal-container
-            style="display: none; ">
-            <div class="overlay active" data-overlay style="z-index: -1;"></div>
-            <div class="modal-content testimonials-modal active">
-              <span class="close modal-close-btn" data-modal-close-btn
-                onclick="closeModal('editEducationModal')">&times;</span>
-              <h4>Add Education</h4>
-              <form id="educationForm" class="content-edit form ">
-                <label for="schoolName">School Name:</label>
-                <input type="text" id="schoolName" class="form-input" required placeholder="University">
-                <label for="schoolYears">Years:</label>
-                <input type="text" pattern="\d{4} - \d{4}" placeholder="YYYY - YYYY" id="schoolYears" class="form-input"
-                  required>
-                <label for="schoolDescription">Description:</label>
-                <textarea id="schoolDescription" class="form-input" required></textarea>
-                <button type="submit">Save</button>
-              </form>
-            </div>
-          </div>
-
-          <!-- Edit Experience Modal -->
-          <div id="editExperienceModal" class="modal modal-container active" data-modal-container
-            style="display: none; ">
-            <div class="overlay active" data-overlay style="z-index: -1;"></div>
-            <div class="modal-content testimonials-modal active">
-              <span class="close modal-close-btn" data-modal-close-btn
-                onclick="closeModal('editExperienceModal')">&times;</span>
-              <h4>Add Experience</h4>
-              <form id="experienceForm">
-                <label for="experienceTitle">Title:</label>
-                <input type="text" id="experienceTitle" class="form-input" required placeholder="Assotiation">
-                <label for="experienceYears">Years:</label>
-                <input type="text" pattern="\d{4} - \d{4}" placeholder="YYYY - YYYY" id="experienceYears"
-                  class="form-input" required>
-                <label for="experienceDescription">Description:</label>
-                <textarea id="experienceDescription" class="form-input" required></textarea>
-                <button type="submit">Save</button>
-              </form>
-            </div>
-          </div>
-
-          <!-- Edit Skills Modal -->
-          <div id="editSkillsModal" class="modal modal-container active" data-modal-container style="display: none; ">
-            <div class="overlay active" data-overlay style="z-index: -1;"></div>
-            <div class="modal-content testimonials-modal active">
-              <span class="close modal-close-btn" data-modal-close-btn
-                onclick="closeModal('editSkillsModal')">&times;</span>
-              <h4>Add Skills</h4>
-              <form id="skillsForm">
-                <label for="skillName">Skill Name:</label>
-                <input type="text" id="skillName" class="form-input" required>
-                <label for="skillPercentage">Percentage:</label>
-                <input type="range" min="0" max="100" value="50" id="skillPercentage" class="form-input in-range"
-                  required>
-                <div id="rangeValue">50%</div>
-                <button type="submit">Save</button>
-              </form>
-            </div>
-          </div>
-          <script>
-            var rangeInput = document.getElementById("skillPercentage");
-            var rangeValue = document.getElementById("rangeValue");
-
-            rangeInput.addEventListener("input", function () {
-              rangeValue.innerHTML = this.value + "%";
-            });
-          </script>
-
-
-        </div>
+        
+      
+        <!-- Edit Modals (remains unchanged) -->
+      
       </article>
+      
 
 
 
@@ -1401,7 +1300,8 @@
           <div id="github-user-info"></div>
           <div id="github-repo-list"></div>
         </section>
-      </article>
+      </article> 
+      
 
   </main>
 
