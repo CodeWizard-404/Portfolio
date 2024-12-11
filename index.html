@@ -857,7 +857,7 @@
 
     <ul class="filter-list">
 
-      <li class="filter-item">
+      <!--<li class="filter-item">
         <button class="active" data-filter-btn>All</button>
       </li>
 
@@ -879,20 +879,20 @@
 
       <li class="filter-item">
         <button data-filter-btn>Other</button>
-      </li>
+      </li>-->
 
     </ul>
 
     <div class="filter-select-box">
       <button class="filter-select" data-select>
-        <div class="select-value" data-selecct-value>Select category</div>
+        <!--<div class="select-value" data-selecct-value>Select category</div>
         <div class="select-icon">
           <ion-icon name="chevron-down"></ion-icon>
-        </div>
+        </div>-->
       </button>
 
       <ul class="select-list">
-        <li class="select-item">
+        <!--<li class="select-item">
           <button data-select-item>All</button>
         </li>
         <li class="select-item">
@@ -909,7 +909,7 @@
         </li>
         <li class="select-item">
           <button data-select-item>Other</button>
-        </li>
+        </li>-->
       </ul>
     </div>
 
@@ -939,11 +939,11 @@
 
           <label for="category">Category:</label><br>
           <select id="category" class="choose form-input" required>
-            <option value="web">Web</option>
+           <!-- <option value="web">Web</option>
             <option value="app">App</option>
             <option value="game">Game</option>
             <option value="mobile">Mobile</option>
-            <option value="other">Other</option>
+            <option value="other">Other</option> -->
           </select>
 
           <button type="submit" class="save-project">Save</button>
@@ -983,6 +983,14 @@
     return `assets/images/projects/${repoName}.png`; 
   }
 
+    // Function to capitalize the first letter of each word
+    function capitalizeFirstLetter(str) {
+      return str
+        .split(' ') // Split the string into words
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize first letter of each word
+        .join(' '); // Join the words back together
+    }
+
   // Function to populate the portfolio with the repositories
   async function populatePortfolio() {
     const repos = await fetchGitHubRepos();
@@ -1000,18 +1008,21 @@
 
       const projectImage = getProjectImagePath(repo.name); // Get image based on repo name
 
+      // Fetch topics for the repository
+      const topics = repo.topics.length > 0 ? repo.topics.map(capitalizeFirstLetter).join('/ ') : '---'; // Capitalize each topic
+
       projectItem.innerHTML = `
-      <a href="${repo.html_url}" target="_blank">
-        <figure class="project-img" style="background-color: var(--white-1);>
-          <div class="project-item-icon-box">
-            <ion-icon name="eye-outline"></ion-icon>
-          </div>
-          <img src="${projectImage}" loading="lazy" alt="${repo.name}" style="width: 285px; height: 160px; object-fit: cover;">
-        </figure>
-        <h3 class="project-title">${repo.name}</h3>
-        <p class="project-category">${repo.language || 'Other'}</p>
-      </a>
-    `;
+        <a href="${repo.html_url}" target="_blank">
+          <figure class="project-img" style="background-color: var(--white-1);">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="${projectImage}" loading="lazy" alt="${repo.name}" style="width: 285px; height: 160px; object-fit: cover;">
+          </figure>
+          <h3 class="project-title">${repo.name}</h3>
+          <p class="project-category">${topics}</p> <!-- Display the topics instead of language -->
+        </a>
+      `;
     
       projectList.appendChild(projectItem);
     });
