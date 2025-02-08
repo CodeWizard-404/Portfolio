@@ -37,27 +37,6 @@ This project utilizes a modern stack of tools and technologies to create a seaml
 - **SASS/SCSS:** For writing clean, reusable stylesheets.
 - **Git:** For version control, keeping track of all changes made to the project.
 
----
-
-## **📂 Project Structure**
-
-Here’s an overview of the directory structure of this project:
-
-```bash
-Portfolio/
-├── assets/
-│   ├── images/              # Project images and portfolio pictures
-│   ├── icons/               # SVG icons used in the project
-├── src/
-│   ├── components/          # Reusable React components (if using React)
-│   ├── styles/              # SCSS/CSS files for styling
-│   ├── js/                  # JavaScript files for dynamic functionality
-├── index.html               # Main HTML file
-├── package.json             # Project dependencies
-├── webpack.config.js        # Webpack configuration for bundling
-├── README.md                # This file
-└── .gitignore               # Git ignore file to exclude unnecessary files
-```
 
 ---
 
