@@ -5,21 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <meta name="description" content="Portfolio of Sofyen Laghouanem, a motivated IT graduate specialized in system development, with experience in web and mobile applications.">
+  <meta name="keywords" content="Sofyen Laghouanem, IT, software development, web development, mobile apps, portfolio">
+  <title>Portfolio - Sofyen Laghouanem</title>
 
-  <!--
-    - favicon
-  -->
   <link rel="shortcut icon" href="./assets/images/cv.png" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -34,112 +25,55 @@
           var toggleSwitch = $('.toggle-switch');
           var downloadButton = $('.download-button');
           var navbar = $('nav.navbar');
-  
-          // Remove 'active' class from all navbar links
           $('.navbar-list .navbar-link').removeClass('active');
-  
-          // Add 'active' class to the 'Resume' navbar link
           resumeButton.addClass('active');
-  
-          // Remove 'active' class from all articles
           $('article').removeClass('active');
-  
-          // Add 'active' class to the 'resume' article
           resumeArticle.addClass('active');
-  
-          // Add 'active' class to the sidebar
           sidebar.addClass('active');
-  
-          // Hide the toggle switch and buttons before opening the PDF
           toggleSwitch.addClass('hidden-for-print');
           downloadButton.addClass('hidden-for-print');
           navbar.addClass('hidden-for-print');
-  
-          // Specify the URL of the PDF you want to open
-          var pdfUrl = 'https://cvdesignr.com/p/65814c7836e86'; // Change this to your PDF file's URL
-  
-          // Open the PDF in a new tab
+          var pdfUrl = 'https://cvdesignr.com/p/65814c7836e86';
           window.open(pdfUrl, '_blank');
-  
-          // Show the toggle switch and buttons again after opening the PDF
           setTimeout(function () {
               toggleSwitch.removeClass('hidden-for-print');
               downloadButton.removeClass('hidden-for-print');
               navbar.removeClass('hidden-for-print');
-              
-              // Remove 'active' class from the sidebar after opening the PDF
               sidebar.removeClass('active');
           }, 100);
       });
-  });
-  
-
-
-
+    });
   </script>
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FPGS836K8N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-FPGS836K8N');
   </script>
 </head>
 
 <body>
-
-  <!--
-    - #MAIN
-  -->
-
   <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
     <aside class="sidebar" data-sidebar>
-
-      <!--
-      - #DarkMode
-      -->
-
       <div class="toggle-switch">
         <label class="switch-label">
           <input type="checkbox" class="checkbox">
           <span class="slider"></span>
         </label>
       </div>
-
-      <!--
-      - #SIDEBAR info
-    -->
-
       <div class="sidebar-info">
-
         <figure class="avatar-box">
           <img src="./assets/images/PDP.jpg" alt="Sofyen Laghouanem" width="80">
         </figure>
-
         <div class="info-content">
-          <h1 class="name" title="Name">Sofyen Laghouanem</h1>
-
-          <p class="title">Developer</p>
+          <h1 class="name" title="Name">Laghouanem<br>Sofyen</h1>
+          <p class="title">Full-Stack Developer</p>
         </div>
-
-        <!--
-        - #CV Download
-        -->
-
-```
-
         <button class="download-button">
           <div class="docs">
-            <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2"
-              stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+            <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
               <polyline points="14 2 14 8 20 8"></polyline>
               <line y2="13" x2="8" y1="13" x1="16"></line>
@@ -149,180 +83,99 @@
             <a href="#">Resume</a>
           </div>
           <div class="download">
-            <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2"
-              stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+            <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
               <polyline points="7 10 12 15 17 10"></polyline>
               <line y2="3" x2="12" y1="15" x1="12"></line>
             </svg>
           </div>
         </button>
-
-        <!--
-      - #SIDEBAR contact
-    -->
-
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
-
           <ion-icon name="chevron-down"></ion-icon>
         </button>
-
       </div>
-
       <div class="sidebar-info_more">
-
         <div class="separator"></div>
-
         <ul class="contacts-list">
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="mail-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Email
                 <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
               </p>
-
-              <a href="mailto:sofienlaghouanem@gmail.com" class="contact-link"
-                contenteditable="false">sofienlaghouanem@gmail.com</a>
+              <a href="mailto:sofienlaghouanem@gmail.com" class="contact-link" contenteditable="false">sofienlaghouanem@gmail.com</a>
             </div>
-
           </li>
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="phone-portrait-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Phone
                 <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
               </p>
-
               <a href="tel:+21620031474" class="contact-link" contenteditable="false">+216 20 031 474</a>
             </div>
-
           </li>
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="calendar-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
-
               <time datetime="2002-08-28">August 28, 2002</time>
             </div>
-
           </li>
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Location
                 <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
               </p>
               <address contenteditable="false">8 Bis, Av de France, Rades, 2040, Tunisia</address>
             </div>
-
           </li>
-
         </ul>
-
         <div class="separator"></div>
-
-        <ul class="social-list">          
-
+        <ul class="social-list">
           <li class="social-item">
             <a href="https://www.facebook.com/Sofien.laghouanem" class="social-link">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://www.instagram.com/sofyen.laghouanem/" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://github.com/CodeWizard-404" class="social-link">
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://stackoverflow.com/users/18180193/sofyen-laghouanem" class="social-link">
               <ion-icon name="logo-stackoverflow"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://www.linkedin.com/in/sofyen-laghouanem/" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
-
         </ul>
-        <ul class="wrapper ">
-          <li class="icon facebook">
-            <span class="tooltip">Facebook</span>
-            <a href="https://www.facebook.com/Sofien.laghouanem"><ion-icon name="logo-facebook"></ion-icon><i
-                class="fab fa-facebook-f"></i></a>
-          </li>
-
-          <li class="icon instagram">
-            <span class="tooltip">Instagram</span>
-            <a href="https://www.instagram.com/sofyen.laghouanem/"><ion-icon name="logo-instagram"></ion-icon><i
-                class="fab fa-instagram"></i></a>
-          </li>
-
-          <li class="icon github">
-            <span class="tooltip">GitHub</span>
-            <a href="https://github.com/CodeWizard-404"><ion-icon name="logo-github"></ion-icon><i class="fab fa-github"></i></a>
-          </li>
-
-          <li class="icon stackoverflow">
-            <span class="tooltip">Stack Overflow</span>
-            <a href="https://stackoverflow.com/users/18180193/sofyen-laghouanem"><ion-icon name="logo-stackoverflow"></ion-icon><i
-                class="fab fa-stack-overflow"></i></a>
-          </li>
-
-          <li class="icon linkedin">
-            <span class="tooltip">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/sofyen-laghouanem/"><ion-icon name="logo-linkedin"></ion-icon><i class="fab fa-linkedin"></i></a>
-          </li>
-        </ul>
-
       </div>
-
     </aside>
 
-    <!--
-      - #main-content
-    -->
-
     <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
       <nav class="navbar">
-
         <ul class="navbar-list">
-          <li class="navbar-item ">
+          <li class="navbar-item">
             <button class="navbar-link active" data-nav-link="About">About</button>
           </li>
           <li class="navbar-item">
@@ -335,12 +188,7 @@
             <button class="navbar-link" data-nav-link="Contact">Contact</button>
           </li>
         </ul>
-
       </nav>
-
-      <!--
-        - #ABOUT
-      -->
 
       <article class="about active" data-page="about">
         <header>
@@ -349,19 +197,13 @@
         <section class="about-text">
           <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
           <p contenteditable="false">
-            Hello, and welcome to my website! I'm Sofyen Laghouanem, a motivated IT graduate specialized in system development. With a strong foundation in full-stack development, I have proven experience delivering robust web and mobile applications. My expertise lies in creating practical, high-quality software solutions that meet user needs. I am skilled in problem-solving and constantly strive to innovate in the tech space. Through this website, I aim to showcase my projects, skills, and the journey I’ve taken to become a software engineer and tech innovator. I'm excited to share my professional growth and the impact I’m making in the world of technology.
+            I’m Sofyen Laghouanem, a motivated IT graduate specializing in system development, with a passion for delivering robust web and mobile applications. Currently pursuing Information Technology at ISET Charguia, Tunisia (expected graduation June 2025), I excel in full-stack development, problem-solving, and crafting high-quality, user-centric software solutions. My journey began with a High School Degree in Technical Science, sparking my enthusiasm for technology, which I’ve since channeled into hands-on internships and innovative projects. I thrive on turning complex challenges into practical solutions, and this portfolio showcases my skills, experience, and dedication to becoming a leading software engineer.
           </p>
+          <a href="#portfolio" class="cta-button">Explore My Work</a> <!-- Note: Style with CSS for a vibrant button -->
         </section>
-
-        <!--
-          - service
-        -->
-
         <section class="service">
           <h3 class="h3 service-title">What I Do</h3>
-
           <ul class="service-list">
-
             <li class="service-item">
               <div class="service-icon-box">
                 <img src="./assets/images/dev.png" alt="Web development icon" width="40">
@@ -369,11 +211,10 @@
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Web Development</h4>
                 <p class="service-item-text">
-                  I specialize in building scalable, user-friendly web applications using modern frameworks like Angular, React, and Spring Boot. My focus is on creating solutions that meet business needs and provide seamless user experiences.
+                  I build scalable, user-friendly web applications using frameworks like Angular, React, Spring Boot, Django, Symfony, and Node.js. Proficient in HTML, CSS, JavaScript, TypeScript, PHP, and Python, I create seamless front-end experiences and robust back-end systems tailored to business needs.
                 </p>
               </div>
             </li>
-
             <li class="service-item">
               <div class="service-icon-box">
                 <img src="./assets/images/mobile.png" alt="Mobile app icon" width="40">
@@ -381,11 +222,10 @@
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Mobile Apps</h4>
                 <p class="service-item-text">
-                  I develop high-quality mobile applications for both Android and iOS using Flutter and Android Studio, ensuring functionality, performance, and design excellence.
+                  I develop high-quality mobile applications for iOS and Android using Flutter for cross-platform solutions and Android Studio (Java) for native apps. My focus is on performance, functionality, and intuitive design.
                 </p>
               </div>
             </li>
-
             <li class="service-item">
               <div class="service-icon-box">
                 <img src="./assets/images/edit.png" alt="UI/UX design icon" width="40">
@@ -393,25 +233,18 @@
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">UI/UX Design</h4>
                 <p class="service-item-text">
-                  With a strong focus on user-centered design, I create intuitive and engaging interfaces that prioritize both aesthetics and usability.
+                  With expertise in Figma and UI/UX principles, I design intuitive, visually appealing interfaces that enhance user engagement. I prioritize functionality and aesthetics to deliver experiences that resonate with users.
                 </p>
               </div>
             </li>
-
           </ul>
         </section>
       </article>
 
-      <!-- 
-        #RESUME
-      -->
-
       <article class="resume" data-page="resume">
-
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
-      
         <section class="timeline">
           <div class="title-wrapper">
             <div class="icon-box">
@@ -423,10 +256,9 @@
               </div>
             </h3>
           </div>
-      
           <ol id="education-list" class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">Information Technology (IT) with specialization in Development of Information Systems (DSI), ISET Charguia
+              <h4 class="h4 timeline-item-title" contenteditable="false">Information Technology, ISET Charguia
                 <div class="icons-info">
                   <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
                   <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
@@ -434,7 +266,7 @@
               </h4>
               <span contenteditable="false">September 2022 — June 2025</span>
               <p class="timeline-text" contenteditable="false">
-                Specialized in Information Systems Development, gaining in-depth knowledge of software engineering, system design, and database management.
+                Specialized in Information Systems Development (DSI). Engaged in advanced coursework and projects in software engineering, system design, and database management, building a strong foundation for a career in technology.
               </p>
             </li>
             <li class="timeline-item">
@@ -446,11 +278,11 @@
               </h4>
               <span contenteditable="false">September 2021 — March 2022</span>
               <p class="timeline-text" contenteditable="false">
-                Explored computing management and its applications, learning to bridge the gap between technology and business strategies.
+                Studied computing management, gaining insights into integrating technology with business strategies, which enhanced my analytical and organizational skills.
               </p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">High School Degree in Technical Science, High School Farhat Hached Rades
+              <h4 class="h4 timeline-item-title" contenteditable="false">High School Degree in Technical Science, Farhat Hached Rades
                 <div class="icons-info">
                   <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
                   <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
@@ -458,12 +290,11 @@
               </h4>
               <span contenteditable="false">September 2018 — June 2021</span>
               <p class="timeline-text" contenteditable="false">
-                Gained a technical science foundation, which ignited my passion for technology and led me to pursue IT as a career.
+                Developed a solid grounding in technical sciences, igniting my passion for technology and paving the way for my IT career.
               </p>
             </li>
           </ol>
         </section>
-      
         <section class="timeline">
           <div class="title-wrapper">
             <div class="icon-box">
@@ -475,34 +306,9 @@
               </div>
             </h3>
           </div>
-      
           <ol id="experience-list" class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">Final Year Project Internship, EndaTao Tunis, TU, Tunisia
-                <div class="icons-info">
-                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
-                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
-                </div>
-              </h4>
-              <span contenteditable="false">February 2025 — June 2025</span>
-              <p class="timeline-text" contenteditable="false">
-                Engineered a platform for Enda Tao, integrating geolocation, real-time analytics, and secure authentication to optimize operational workflows.
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">Improvement Internship, Tunisair Charguia 2
-                <div class="icons-info">
-                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
-                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
-                </div>
-              </h4>
-              <span contenteditable="false">January 2025 — February 2025</span>
-              <p class="timeline-text" contenteditable="false">
-                Optimized an internship management platform, enhancing application processing efficiency and security.
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">Joint CEO, 3DEEZ.tn Online Store
+              <h4 class="h4 timeline-item-title" contenteditable="false">Joint CEO at 3DEEZ.tn
                 <div class="icons-info">
                   <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
                   <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
@@ -510,11 +316,50 @@
               </h4>
               <span contenteditable="false">October 2023 — Present</span>
               <p class="timeline-text" contenteditable="false">
-                As co-founder of 3DEEZ.TN, I lead business operations for an online store specializing in 3D-printed products, providing innovative solutions to customers and managing the day-to-day activities of the platform.
+                Co-founded and lead an online store specializing in 3D-printed products:
+                <ul>
+                  <li>Directed the development of an e-commerce platform using Angular and JSON</li>
+                  <li>Managed a team to deliver custom solutions and optimize user experience</li>
+                  <li>Implemented strategies to enhance online visibility and customer engagement</li>
+                </ul>
               </p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">Introductory Internship, SagemCom Ben Arous
+              <h4 class="h4 timeline-item-title" contenteditable="false">Final Year Project Internship at EndaTao Tunis
+                <div class="icons-info">
+                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                </div>
+              </h4>
+              <span contenteditable="false">February 2025 — June 2025</span>
+              <p class="timeline-text" contenteditable="false">
+                Engineered a platform to streamline operations:
+                <ul>
+                  <li>Developed TraceFlow using React, TypeScript, Flutter, and Node.js</li>
+                  <li>Integrated geolocation (Google APIs) and secure authentication (Keycloak)</li>
+                  <li>Built real-time analytics and multilingual dashboards for various roles</li>
+                </ul>
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title" contenteditable="false">Improvement Internship at Tunisair Charguia 2
+                <div class="icons-info">
+                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
+                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
+                </div>
+              </h4>
+              <span contenteditable="false">January 2025 — February 2025</span>
+              <p class="timeline-text" contenteditable="false">
+                Enhanced an internship management platform:
+                <ul>
+                  <li>Optimized application processing using Angular and Spring Boot</li>
+                  <li>Improved security with JWT authentication</li>
+                  <li>Added dynamic dashboards and audit trails</li>
+                </ul>
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title" contenteditable="false">Introductory Internship at SagemCom Ben Arous
                 <div class="icons-info">
                   <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
                   <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
@@ -522,11 +367,16 @@
               </h4>
               <span contenteditable="false">January 2023 — February 2023</span>
               <p class="timeline-text" contenteditable="false">
-                Gained hands-on experience in an IT work environment, observing and managing technical projects effectively.
+                Gained practical IT experience:
+                <ul>
+                  <li>Contributed to technical projects in a professional environment</li>
+                  <li>Observed software development workflows and best practices</li>
+                  <li>Assisted in managing project timelines and deliverables</li>
+                </ul>
               </p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">Content Moderator, Concentrix Charguia 2
+              <h4 class="h4 timeline-item-title" contenteditable="false">Content Moderator at Concentrix Charguia 2
                 <div class="icons-info">
                   <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
                   <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
@@ -534,55 +384,22 @@
               </h4>
               <span contenteditable="false">July 2022 — December 2024</span>
               <p class="timeline-text" contenteditable="false">
-                Ensured the quality and accuracy of content, maintaining platform guidelines and improving the user experience for millions of customers.
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">President, Securniets ISET Charguia
-                <div class="icons-info">
-                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
-                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
-                </div>
-              </h4>
-              <span contenteditable="false">September 2023 — January 2024</span>
-              <p class="timeline-text" contenteditable="false">
-                Led the largest cybersecurity association in Tunisia, overseeing training programs and community initiatives.
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">Member, AJCC Tunisia, Rades
-                <div class="icons-info">
-                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
-                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
-                </div>
-              </h4>
-              <span contenteditable="false">June 2020 — October 2020</span>
-              <p class="timeline-text" contenteditable="false">
-                Contributed to creating a cultural field for youth, fostering creativity and artistic development.
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" contenteditable="false">Volunteer, Red Crescent Tunisia, Rades
-                <div class="icons-info">
-                  <ion-icon name="create-outline" class="button-edit" onclick="enableEdit(this)"></ion-icon>
-                  <ion-icon name="trash-outline" class="button-delete" onclick="deleteInfo(this)"></ion-icon>
-                </div>
-              </h4>
-              <span contenteditable="false">July 2020 — September 2020</span>
-              <p class="timeline-text" contenteditable="false">
-                Supported humanitarian efforts and community services.
+                Maintained platform quality:
+                <ul>
+                  <li>Ensured content accuracy and adherence to guidelines</li>
+                  <li>Enhanced user experience for a large customer base</li>
+                  <li>Developed attention to detail and time management skills</li>
+                </ul>
               </p>
             </li>
           </ol>
         </section>
-      
         <section class="skills">
           <h3 class="skills-title">My Skills
             <div class="edit-icon" onclick="editSkills()">
               <ion-icon name="create" class="button-edit"></ion-icon>
             </div>
           </h3>
-      
           <div class="skills-container">
             <div class="skill-card">
               <div class="skill-header">
@@ -596,7 +413,6 @@
                 <li><strong>Databases:</strong> MySQL, Oracle, PostgreSQL, MongoDB</li>
               </ul>
             </div>
-      
             <div class="skill-card">
               <div class="skill-header">
                 <ion-icon name="construct-outline"></ion-icon>
@@ -609,198 +425,154 @@
                 <li><strong>Development Tools:</strong> VMware, Postman, Microsoft Excel, Power BI, Talend, ESB, ELT, SOAP, REST API, Docker, Keycloak, WebSockets, Swagger</li>
               </ul>
             </div>
-      
             <div class="skill-card">
               <div class="skill-header">
                 <ion-icon name="brain-outline"></ion-icon>
-                <h5>Theoretical & Conceptual Skills</h5>
+                <h5>Conceptual Skills</h5>
               </div>
               <ul class="skill-list">
                 <li><strong>Conception & Modeling:</strong> UML, Scrum</li>
-                <li><strong>Data Structures & Algorithms, Binary Arithmetic</strong></li>
-              </ul>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-header">
-                <ion-icon name="people-outline"></ion-icon>
-                <h5>Soft Skills</h5>
-              </div>
-              <ul class="skill-list">
-                <li><strong>Adaptability & Time Management</strong></li>
-                <li><strong>Problem Solving & Technical Support</strong></li>
+                <li><strong>Technical Knowledge:</strong> Data Structures & Algorithms, Binary Arithmetic</li>
+                <li><strong>Soft Skills:</strong> Problem Solving, Adaptability, Time Management, Technical Support</li>
               </ul>
             </div>
           </div>
         </section>
-      
       </article>
 
-      <!--
-        - #PORTFOLIO
-      -->
-
       <article class="portfolio" data-page="portfolio">
-
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
         </header>
-
         <section class="projects">
-
           <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Web</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Mobile</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Data</button>
+            </li>
           </ul>
-
           <div class="filter-select-box">
-            <button class="filter-select" data-select>
-            </button>
-
+            <button class="filter-select" data-select></button>
             <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Web</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Mobile</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Data</button>
+              </li>
             </ul>
           </div>
-
           <ul class="project-list" id="project-list">
-            <!-- Projects will be injected here by JavaScript -->
-          </ul>
-
-        </section>
-
-        <!-- Add Project Modal (unchanged) -->
-        <div class="modal-container-set">
-          <div id="formContainer" class="modal modal-container active" style="display: none;">
-            <div class="overlay active" data-overlay style="z-index: -1;"></div>
-            <div class="modal-content testimonials-modal active">
-              <span class="close modal-close-btn" data-modal-close-btn onclick="closeModal('formContainer')">×</span>
-              <h4>Add Project</h4>
-              <form id="blockForm" class="content-edit form">
-
-                <label for="imageUrl">Image:</label>
-                <input type="file" id="imageUrl" name="image" accept="image/*" class="form-input" required>
-
-                <label for="linkUrl">Link URL:</label>
-                <input type="text" id="linkUrl" class="form-input" required>
-
-                <label for="title">Title:</label>
-                <input type="text" id="title" class="form-input" required>
-
-                <label for="category">Category:</label><br>
-                <select id="category" class="choose form-input" required>
-                </select>
-
-                <button type="submit" class="save-project">Save</button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-      </article>
-
-      <script>
-        // Function to fetch repositories from GitHub
-        async function fetchGitHubRepos() {
-          const username = 'CodeWizard-404'; // Your GitHub username
-          const url = `https://api.github.com/users/${username}/repos`;
-
-          try {
-            const response = await fetch(url);
-            const data = await response.json();
-
-            // Filter out unwanted repositories
-            const filteredRepos = data.filter(repo => !['CodeWizard-404', 'ISET', 'my-portfolio','Portfolio'].includes(repo.name));
-
-            // Sort repositories by last updated date in descending order
-            filteredRepos.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-
-            return filteredRepos;
-          } catch (error) {
-            console.error('Error fetching repositories:', error);
-            return [];
-          }
-        }
-
-        // Function to get project image path based on repository name
-        function getProjectImagePath(repoName) {
-          // Assuming screenshots are stored in the "screenshots" folder and named by repository name
-          return `assets/images/projects/${repoName}.png`; 
-        }
-
-        // Function to capitalize the first letter of each word
-        function capitalizeFirstLetter(str) {
-          return str
-            .split(' ') // Split the string into words
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize first letter of each word
-            .join(' '); // Join the words back together
-        }
-
-        // Function to populate the portfolio with the repositories
-        async function populatePortfolio() {
-          const repos = await fetchGitHubRepos();
-          const projectList = document.getElementById('project-list');
-
-          // Clear existing projects in the list
-          projectList.innerHTML = '';
-
-          // Loop through the repositories and create project items
-          repos.forEach(repo => {
-            const projectItem = document.createElement('li');
-            projectItem.classList.add('project-item', 'active');
-            projectItem.setAttribute('data-filter-item', '');
-            projectItem.setAttribute('data-category', 'web'); // Default category, you can adjust this based on your needs
-
-            const projectImage = getProjectImagePath(repo.name); // Get image based on repo name
-
-            // Fetch topics for the repository
-            const topics = repo.topics.length > 0 ? repo.topics.map(capitalizeFirstLetter).join('/ ') : '---'; // Capitalize each topic
-
-            projectItem.innerHTML = `
-              <a href="${repo.html_url}" target="_blank">
+            <li class="project-item active" data-filter-item data-category="web">
+              <a href="https://github.com/CodeWizard-404/TraceFlow" target="_blank">
                 <figure class="project-img" style="background-color: var(--white-1);">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="${projectImage}" loading="lazy" alt="${repo.name}" style="width: 285px; height: 160px; object-fit: cover;">
+                  <img src="./assets/images/projects/TraceFlow.png" loading="lazy" alt="TraceFlow Project" style="width: 285px; height: 160px; object-fit: cover;">
                 </figure>
-                <h3 class="project-title">${repo.name}</h3>
-                <p class="project-category">${topics}</p> <!-- Display the topics instead of language -->
+                <h3 class="project-title">TraceFlow</h3>
+                <p class="project-category">React / TypeScript / Flutter / Node.js / PostgreSQL</p>
+                <p class="project-description">AI-powered platform for Enda Tao to track activities, manage timesheets, and ensure receipt traceability with real-time geolocation and multilingual dashboards.</p>
               </a>
-            `;
-          
-            projectList.appendChild(projectItem);
-          });
-        }
-
-        // Call the function to populate the portfolio when the page loads
-        document.addEventListener('DOMContentLoaded', populatePortfolio);
-      </script>
-
-      <!--
-        - #CONTACT
-      -->
+            </li>
+            <li class="project-item active" data-filter-item data-category="web">
+              <a href="https://github.com/CodeWizard-404/Internship-Management-System" target="_blank">
+                <figure class="project-img" style="background-color: var(--white-1);">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/Internship-Management-System.png" loading="lazy" alt="Internship Management System" style="width: 285px; height: 160px; object-fit: cover;">
+                </figure>
+                <h3 class="project-title">Internship Management System</h3>
+                <p class="project-category">Angular / Spring Boot / MySQL</p>
+                <p class="project-description">Secure system automating internship lifecycle management with application submission, validation, and HR processing features.</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <script>
+          async function fetchGitHubRepos() {
+            const username = 'CodeWizard-404';
+            const url = `https://api.github.com/users/${username}/repos`;
+            try {
+              const response = await fetch(url);
+              const data = await response.json();
+              const filteredRepos = data.filter(repo => !['CodeWizard-404', 'ISET', 'my-portfolio', 'Portfolio'].includes(repo.name));
+              filteredRepos.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+              return filteredRepos;
+            } catch (error) {
+              console.error('Error fetching repositories:', error);
+              return [];
+            }
+          }
+          function getProjectImagePath(repoName) {
+            return `assets/images/projects/${repoName}.png`;
+          }
+          function capitalizeFirstLetter(str) {
+            return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+          }
+          async function populatePortfolio() {
+            const repos = await fetchGitHubRepos();
+            const projectList = document.getElementById('project-list');
+            repos.forEach(repo => {
+              const projectItem = document.createElement('li');
+              projectItem.classList.add('project-item', 'active');
+              projectItem.setAttribute('data-filter-item', '');
+              projectItem.setAttribute('data-category', 'web');
+              const projectImage = getProjectImagePath(repo.name);
+              const topics = repo.topics.length > 0 ? repo.topics.map(capitalizeFirstLetter).join('/ ') : '---';
+              projectItem.innerHTML = `
+                <a href="${repo.html_url}" target="_blank">
+                  <figure class="project-img" style="background-color: var(--white-1);">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="${projectImage}" loading="lazy" alt="Screenshot of ${repo.name} project" style="width: 285px; height: 160px; object-fit: cover;">
+                  </figure>
+                  <h3 class="project-title">${repo.name}</h3>
+                  <p class="project-category">${topics}</p>
+                </a>
+              `;
+              projectList.appendChild(projectItem);
+            });
+          }
+          document.addEventListener('DOMContentLoaded', populatePortfolio);
+        </script>
+      </article>
 
       <article class="contact" data-page="contact">
         <header>
           <h2 class="h2 article-title">Contact</h2>
         </header>
-
         <section class="mapbox" data-mapbox>
           <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6733144.240998148!2d10.641208!3d34.511298!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDQ1JzQ1LjEiTiAxMMKwMTUnNTkuMyJF!5e0!3m2!1sen!2stn!4v1683764068141!5m2!1sen!2stn"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6733144.240998148!2d10.641208!3d34.511298!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDQ1JzQ1LjEiTiAxMMKwMTUnNTkuMyJF!5e0!3m2!1sen!2stn!4v1683764068141!5m2!1sen!2stn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </figure>
         </section>
-
         <section class="contact-form">
           <h3 class="h3 form-title">Contact Form</h3>
-
+          <p>Interested in working together? Let’s connect!</p>
           <form action="mailto:sofienlaghouanem@gmail.com" method="post" class="form">
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
               <input type="email" name="email" class="form-input" placeholder="Email address" required>
             </div>
-
             <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
-
             <button class="form-btn" type="submit">
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
@@ -808,91 +580,12 @@
           </form>
         </section>
       </article>
+    </div>
+  </main>
 
-      <!--
-        - #ADMIN
-      -->
-
-      <article class="about" data-page="admin">
-
-        <header>
-          <h2 class="h2 article-title">Admin Login</h2>
-        </header>
-
-        <section class="contact-form">
-
-          <h3 class="h3 Admin-log">Restricted access</h3>
-          <section class="about-text">
-            <p>
-              Welcome to the Admin Login Portal! Here, you hold the key to unlock the full potential of your captivating
-              portfolio website. With exclusive access granted only to you, this secure gateway empowers you to shape
-              and refine your digital masterpiece with ease. Step into a realm of limitless creativity and take command
-              of your online presence. Let your imagination soar as you harness the power to edit and embellish your
-              website, turning it into a true reflection of your artistic prowess. Embrace this digital realm, where
-              innovation meets artistry, and make your mark on the virtual canvas.
-            </p>
-          </section>
-
-          <form id="loginForm" class="form" data-form>
-            <div class="input-wrapper">
-              <input type="text" name="logName" class="form-input" placeholder="Full name" required data-form-input>
-              <input type="password" name="logPass" class="form-input" placeholder="Password" required data-form-input>
-            </div>
-            <button class="form-btn" type="submit" enabled data-form-btn>
-              <ion-icon name="log-in"></ion-icon>
-              <span>Login</span>
-            </button>
-            <div id="errorContainer" class="errorLook"></div>
-            <div id="validContainer" class="validLook"></div>
-          </form>
-
-        </section>
-
-      </article>
-
-      <!--
-        - #API Github
-      -->
-
-      <article class="about" data-page="api github">
-
-        <header>
-          <h2 class="h2 article-title">Github</h2>
-        </header>
-
-        <section class="contact-form">
-          <h3 class="h3 ">Github API</h3>
-          <section class="about-text">
-            <p>
-              Github APIs (or Github REST APIs) are the APIs that you can use to interact with GitHub. They allow you to
-              create and manage repositories, branches, issues, pull requests, and many more. For fetching publicly
-              available information (like public repositories, user profiles, etc.), you can call the API. For other
-              actions, you need to provide an authenticated token.
-            </p><br><br>
-          </section>
-          <div class="input-container">
-            <input type="text" id="username-input" class="input-field" placeholder="GitHub username" value="CodeWizard-404">
-            <button onclick="fetchUserData()" class="fetch-button">Fetch Repositories</button>
-          </div>
-          <div id="github-user-info"></div>
-          <div id="github-repo-list"></div>
-        </section>
-      </article> 
-      
-
-    </main>
-
-    <!--
-      - Js link
-    -->
-    <script src="./assets/js/script.js"></script>
-
-    <!--
-      - ionicon link
-    -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-  </body>
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
 
 </html>
